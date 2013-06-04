@@ -1,0 +1,137 @@
+/*************_tab-menu.scss*************/
+/*************_global-vars.scss*************/
+/*************_style-mixins.scss*************/
+/*************_global.scss*************/
+a.pr-btn, input.pr-btn {
+  color: white; }
+
+.tab-menu {
+  position: relative;
+  clear: both;
+  margin: 10px 10px 40px 10px;
+  z-index: 100;
+  border-top: 1px solid #eeeeee;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f6f6f6), to(#eeeeee));
+  background: -webkit-linear-gradient(bottom, #eeeeee, #f6f6f6);
+  background: -moz-linear-gradient(bottom, #eeeeee, #f6f6f6);
+  background: -o-linear-gradient(bottom, #eeeeee, #f6f6f6);
+  background: -ms-linear-gradient(bottom, #eeeeee, #f6f6f6);
+  background: linear-gradient(bottom, #eeeeee, #f6f6f6);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#f6f6f6 , EndColorStr= #eeeeee); }
+  .tab-menu .level-1 li {
+    float: left;
+    margin: -1px 0 -4px 0;
+    margin: -2px 0 -3px 0 \9;
+    *margin: -2px 0 0 0;
+    padding: 7px 20px;
+    border-bottom: 4px solid transparent;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent; }
+    .tab-menu .level-1 li:first-child {
+      -moz-border-radius-topleft: 5px;
+      -webkit-border-top-left-radius: 5px;
+      border-top-left-radius: 5px;
+      -moz-border-radius-bottomleft: 5px;
+      -webkit-border-bottom-left-radius: 5px;
+      border-bottom-left-radius: 5px; }
+    .tab-menu .level-1 li:last-child {
+      border-right: 1px solid #cccccc;
+      text-shadow: 1px 1px white; }
+    .tab-menu .level-1 li a {
+      color: #333; }
+    .tab-menu .level-1 li .level-2 {
+      display: none; }
+    .tab-menu .level-1 li.activeTab, .tab-menu .level-1 li:hover {
+      cursor: pointer;
+      background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1f6ab7), to(#3b7dc0));
+      background: -webkit-linear-gradient(bottom, #3b7dc0, #1f6ab7);
+      background: -moz-linear-gradient(bottom, #3b7dc0, #1f6ab7);
+      background: -o-linear-gradient(bottom, #3b7dc0, #1f6ab7);
+      background: -ms-linear-gradient(bottom, #3b7dc0, #1f6ab7);
+      background: linear-gradient(bottom, #3b7dc0, #1f6ab7);
+      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#1f6ab7 , EndColorStr= #3b7dc0);
+      text-shadow: 1px 1px #004b94;
+      border-top: 1px solid #3b7dc0;
+      border-bottom: 4px solid #004b94;
+      border-left: 1px solid #004b94;
+      border-right: 1px solid #004b94; }
+      .tab-menu .level-1 li.activeTab a, .tab-menu .level-1 li:hover a {
+        color: white;
+        text-decoration: none; }
+    .tab-menu .level-1 li.activeTab .level-2 {
+      position: absolute;
+      top: 32px;
+      left: 0;
+      width: 100%;
+      display: block;
+      background-color: #CCC;
+      -moz-border-radius-bottomleft: 5px;
+      -webkit-border-bottom-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      -moz-border-radius-bottomright: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      z-index: 0; }
+      .tab-menu .level-1 li.activeTab .level-2 li {
+        position: relative;
+        float: left;
+        padding: 9px 20px;
+        border: none;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0; }
+        .tab-menu .level-1 li.activeTab .level-2 li:hover {
+          background: transparent;
+          filter: none; }
+        .tab-menu .level-1 li.activeTab .level-2 li.dd-menu {
+          background: url(../img/dd-arrow.png) no-repeat right 15px; }
+          .tab-menu .level-1 li.activeTab .level-2 li.dd-menu ul {
+            display: none; }
+          .tab-menu .level-1 li.activeTab .level-2 li.dd-menu:hover {
+            background: #eeeeee url(../img/dd-arrow.png) no-repeat right 15px; }
+            .tab-menu .level-1 li.activeTab .level-2 li.dd-menu:hover ul.level-3 {
+              display: block;
+              position: absolute;
+              top: 32px;
+              left: 0;
+              background-color: #EEE;
+              -moz-border-radius-bottomleft: 5px;
+              -webkit-border-bottom-left-radius: 5px;
+              border-bottom-left-radius: 5px;
+              -moz-border-radius-bottomright: 5px;
+              -webkit-border-bottom-right-radius: 5px;
+              border-bottom-right-radius: 5px;
+              width: 150px; }
+              .tab-menu .level-1 li.activeTab .level-2 li.dd-menu:hover ul.level-3 li {
+                float: none;
+                padding: 5px 20px; }
+                .tab-menu .level-1 li.activeTab .level-2 li.dd-menu:hover ul.level-3 li:last-child {
+                  padding-bottom: 12px; }
+        .tab-menu .level-1 li.activeTab .level-2 li a {
+          color: #333;
+          text-shadow: 1px 1px #f6f6f6; }
+          .tab-menu .level-1 li.activeTab .level-2 li a:hover {
+            color: #1f6ab7;
+            text-decoration: underline; }
+  .tab-menu .tab-border {
+    border-top: 3px solid #ccc;
+    border-bottom: 1px solid #999;
+    margin: -4px 0 0 0;
+    *height: 0;
+    position: relative;
+    z-index: 100;
+    clear: both;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px; }
+
+@media only screen and (max-width: 613px) {
+  .tab-menu {
+    display: none; } }

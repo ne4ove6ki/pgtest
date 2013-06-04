@@ -1,0 +1,112 @@
+@import "grid";
+@import "global-vars";
+@import "style-mixins";
+@import "headings-mixins";
+
+.rSearch{
+	position: relative;
+	height: 60px;
+	width: 100%;
+	clear:both;
+	margin:10px 0 0 -5px;
+	.swr{
+			position: absolute;
+			top: 15px;
+			left: 262px;
+			input{
+				position:absolute;
+				top:13px;left:15px;
+				@include font(18px,normal,#999);
+				border: none;
+				outline: none;
+				width:300px
+			}
+			a{
+				display:inline-block;
+				width:60px;	
+				height:40px;
+				position:absolute; top:0; right:0;
+			}
+		}
+	.pL{left:0;top:0;}
+}
+.searchResults{
+	@include col(8);
+	@include last();
+	margin:0 0 20px 0;
+	@include boxSizing();
+	h2{
+			@include h2(20px); 
+			margin:0 0 2px;
+			border-bottom:1px solid #ccc;
+			padding:0 0 3px 0;
+		}
+	.sortFilter{
+		background:#f6f6f6;
+		padding:5px 10px;
+		overflow:auto;
+		@include boxSizing();
+		.sort{
+			float:left;
+			a{margin:0 5px;}
+			a.active{color:#1F6AB7;font-weight:bold;}
+		}
+		.filter{float:right;}
+		select{font-size:11px;padding-left:5px;}
+	}
+	.result{
+			border-bottom: 1px dotted #ccc;
+			padding:10px 0;
+			@include boxSizing();
+			overflow: auto;
+		
+		h3{padding:0; @include font(14px,normal,#1F6AB7);}
+		
+		.wp{
+			float:left; display:inline-block; width:80%; padding-left:15px;
+			p:hover,h3:hover{text-decoration:underline;}	
+		}
+		.type{@include font(12px,normal,$font-color-standard-h);}
+		p{@include font(13px,normal,#333); padding: 0 20px 0 0;}
+		ul,ol{
+			clear:both;
+			list-style-image: url(../img/arrow.png);
+			margin: 10px 0 10px 20px;}
+	}
+}
+/*	Tablet Layout: 768px */
+@media only screen and (min-width: 614px) and (max-width: 903px) {
+	.rSearch .swr{
+		left: 115px;
+	}
+	.searchResults{
+		width:100%;
+		@include boxSizing();
+		padding:0 10px;
+	}
+}
+/*		Mobile Wide Layout: 480px */
+@media only screen and (min-width: 448px) and (max-width: 613px) {
+	.rSearch {
+		display:none;
+	}
+		.searchResults{
+		width:100%;
+		@include boxSizing();
+		padding:0 10px;
+	}
+.searchResults .sortFilter .filter{float:left;margin-top:5px;}
+}
+/*		Mobile Layout: 320px */
+@media only screen and (max-width: 447px) {
+	.rSearch {
+		display:none;
+	}
+		.searchResults{
+			width:100%;
+		@include boxSizing();
+		padding:0 10px;
+			img{display:none;}
+	}
+	.searchResults .sortFilter .filter{float:left;margin-top:5px;}
+}

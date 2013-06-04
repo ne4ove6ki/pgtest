@@ -1,0 +1,141 @@
+@import "header-vars";
+@import "header-mixins";
+@import "grid";
+
+#top_header {
+	@include gradient(#050D46,#032C8E);
+	position:relative;
+	overflow:hidden;
+	height:80px;
+	width:100%;
+	
+	.header-logo {
+			position: absolute;
+			left: 10px;	
+			top:12px;
+			z-index: 25;
+	}
+	.header-wrapper{width:1114px;margin: 0 auto;}
+	.desktop-header{
+		float: none;
+		
+		width: 946px;
+		height:80px;
+		position:relative;
+	
+		#main_menu {
+			@include gradient($navGradientColor1,$navGradientColor2);
+			@include border(bottom,2px,$navBorderBottomColor);
+			height: 24px;
+			width: 946px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 10;
+			zoom: 1;
+		}
+		ul {
+			padding-left: 165px;
+			@include border(bottom);
+			width: 781px;
+			height:23px;
+		}
+		li {
+			float: left;
+			height: 23px;
+		
+			a {
+				font-size: 13px;
+				display: block;
+				height: 15px;
+				line-height: 15px;
+				padding: 3px 8px 5px 8px;
+				@include border(left,1px,#fff);
+				@include border(right,1px,#8a8a8a);
+				font-weight: bold;
+				text-decoration: none;
+				color: #000;
+				background-image: url(../images/tooltip.png);
+				background-position: 100% 10px;
+				background-repeat: no-repeat;
+			}
+			&:first-child a {
+				border-left-width: 0;
+			}
+			&:last-child a {
+				border-right-width: 0;
+			}
+			&:hover {
+				@include gradient($navGradientHoverColor1,$navGradientHoverColor2);
+				zoom: 1;
+			}
+			a:hover {
+				border-color: #9dceff;
+				text-decoration: underline;
+			}
+			&:first-child a:hover {
+				border-left-width: 1px;
+				padding-left: 7px;
+			}
+			&:last-child a:hover {
+				border-right-width: 1px;
+				padding-right: 21px;
+			}
+		}
+		#search {
+			background-color: $searchBGColor;
+			@include rounded(2px);
+			bottom: 10px;
+			display: block;
+			left: 170px;
+			padding: 5px 6px;
+			position: absolute;
+			@include border(top,1px,$searchBorderColor);
+			@include border(left,1px,$searchBorderColor);
+			
+			input {
+				font-size: 14px;
+				height: 14px;
+				line-height: 14px;
+				padding: 4px;
+				width: 246px;
+				@include border(all,1px,$searchInputBorderColor);
+				@include rounded(2px);
+			}
+			button {
+				font-size: 13px;
+				@include gradient($searchButtonGradientColor1,$searchButtonGradientColor2);
+				zoom: 1;
+				@include border(all,1px,$searchButtonBorderColor);
+				height: 23px;
+				line-height: 20px;
+				color: $searchButtonFontColor;
+				font-weight: bold;
+				width: 90px;
+				text-transform: uppercase;
+				cursor: pointer;
+				font-family:Arial;
+				*margin-left:3px;
+			}
+		}
+	}
+}
+/*		Tablet Layout
+-------------------------------------------------------------------------------*/
+@media only screen and (min-width: 614px) and (max-width: 903px) {
+	#top_header{height:auto;}
+	.mobile-header{display:none;}
+	#top_header {
+		.header-wrapper{@include widthCalc(8); margin: 0 auto;}
+		.desktop-header{
+		display:block;
+		@include widthCalc(8);
+		
+		#main_menu {
+			@include widthCalc(8);
+			ul{width:auto;}
+			ul li a{font-size:12px;font-weight:normal;}
+		}
+	}
+}
+}

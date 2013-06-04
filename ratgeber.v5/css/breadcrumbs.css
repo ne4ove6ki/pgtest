@@ -1,0 +1,35 @@
+/*************_breadcrumbs.scss*************/
+/*************_global-vars.scss*************/
+/*************_style-mixins.scss*************/
+.breadcrumbs {
+  margin: 5px 0;
+  overflow: auto;
+  clear: both;
+  float: left; }
+  .breadcrumbs li {
+    float: left;
+    font-size: 11px;
+    padding: 2px 0 0; }
+    .breadcrumbs li a {
+      color: #333333; }
+    .breadcrumbs li a, .breadcrumbs li span {
+      font-size: 11px;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
+    .breadcrumbs li span:first-child {
+      margin: 0 0 0 .5em; }
+    .breadcrumbs li:first-child {
+      line-height: 20px;
+      padding: 0; }
+      .breadcrumbs li:first-child .current {
+        margin: 0 0 0 5px; }
+  .breadcrumbs .current {
+    color: #1f6ab7;
+    font-weight: bold; }
+
+.home {
+  float: left;
+  position: relative;
+  background: url("../img/home1.png") 0 0 no-repeat;
+  height: 20px;
+  width: 22px;
+  cursor: pointer; }

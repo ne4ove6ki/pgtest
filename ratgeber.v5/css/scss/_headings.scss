@@ -1,0 +1,24 @@
+/*************_headings.scss*************/
+@import "global-vars";
+@import "style-mixins";
+@import "headings-mixins";
+
+h1,.huge{
+	@include h1();
+}
+h2,h2 a{
+	@include h2();
+}
+h3,h3 a,.large{
+	@include h3();
+}
+h3 a.important{font-size:1em;}
+h4,.bigger,h4 a,.bigger a{
+	@include h4();
+}
+h5,h5 a,.big{
+	@include h5();
+}
+h6{
+	@include h6();
+}

@@ -1,0 +1,18 @@
+/*************_info.scss*************/
+.img-txt{
+	overflow:auto;
+	clear:both;
+	padding:0 $col_margin;
+	img{
+		float:left;
+		margin:10px 10px 0 0;
+		display:inline-block;
+	}
+	p{
+		@include col(11);
+	}
+}
+.linksRight{
+	float:right;
+	margin:0 12px -7px 0;
+}

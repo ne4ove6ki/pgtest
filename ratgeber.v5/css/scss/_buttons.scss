@@ -1,0 +1,66 @@
+/*************.btns.scss*************/
+@import "global-vars";
+@import "style-mixins";
+@import "button-mixins";
+
+.btn-group{
+	padding:10px 0 10px 0;
+	overflow:auto;
+	*width:45%;
+	a,input[type=submit],input[type=button]{
+		margin-left:7px;
+		float:left;
+	}
+}
+/*BLUE BUTTON*/
+.pr-btn {
+	@include main-btn();
+	@include pr-btn-styles();
+}
+a.pr-btn,input.pr-btn,a.loginBtn{color:$pr-btn-font-color;}
+a.btn{color:$btn-font-color;}
+
+.ddTrigger{
+	@include ddTrigger(#fff);
+}
+.ddsTrigger{
+	@include ddTrigger($font-color-link);
+}
+/*STANDARD GREY BUTTON*/
+.btn{
+	@include main-btn();
+	@include btn-styles();
+}
+/*LOGIN BUTTON*/
+.loginBtn{
+	@include main-btn();
+	@include pr-btn-styles();
+	float:right;
+	margin:15px 0 0 0;
+	padding-left:33px;
+	padding-right:15px;
+}
+/*IMAGE BUTTONS*/
+.i-btn{
+	@include img-btn();
+}
+.img-btns{
+	float:right;
+	margin-top:5px;
+}
+.img-btns a,img-btns input[type="submit"]{
+	display:inline-block;
+	margin:0 0 0 .7em;
+}
+.img-btns a:first-child{margin:0;}
+
+.btn-big{
+	@include main-btn();
+	@include btn-styles();
+	padding:5px 10px 5px 20px;
+	margin-top:15px;
+	display:block;
+	float:none;
+	h2{font-size:16px;}
+	a:hover{text-decoration:none;}
+}

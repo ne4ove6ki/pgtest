@@ -1,0 +1,138 @@
+/*************_content.scss*************/
+.act-wr{
+	margin: 10px 0;
+	clear: both;
+	overflow:auto;
+	h1{
+		float: left;
+		margin: 15px 0 15px 10px;
+	}
+	h1 .imp{font-size:16px;}
+}
+.more{
+	color:$font-color-link-important;
+}
+
+.user{
+	clear:both;
+	padding:5px 10px;
+	.role{
+		color:#666;
+	}
+	.offline{
+		color:#333;
+	}
+	.online{
+		color:#238700;
+	}
+	.invisible{
+		color:#666;
+	}
+	.username{
+		color:$user-name;
+		font-weight:bold;
+	}
+}
+.threadstarter .username{
+	color:$user-name-threadstarter;
+}
+.moderator .username{
+	color:$font-color-link-important;
+}
+
+.role img{
+	margin:.3em .5em -.1em 0;
+}
+.info-block{
+	position:relative; 
+	@include col(6);
+	margin-top:10px;
+	.before{
+		width:90%;
+	}
+	h1{
+		border-bottom:1px solid #999;
+		padding:0 0 5px 0;
+		@include font(16px,normal,$font-color-text-heading);
+	}
+	input[type="text"],textarea{
+		@include col-content(6,5);
+	}
+	
+	article,.error{
+		position:relative;
+		background:$content-bg;
+		padding:5px 10px;
+		overflow:auto;
+		min-height: 35px;
+		margin:5px 0 0;
+		
+	}
+	.error{
+		background-color:#ffeca7;
+	}
+ article section{
+		position:relative;
+	}
+	article p,article ul,article ol, article> a:not(.i-btn),article> label{
+		color:#333;
+		width:90%;
+		display:inline-block;
+	}
+	article form p{
+		display:block;
+		width:100%;
+	}
+	article ul li,article ol li{
+		margin:5px 0 0 0;	
+	}
+	.public{
+	}
+	.info-body{
+		display:none;
+		p{
+			font-style:italic;
+		}
+	}
+	input[type="checkbox"]{
+		color:#333;
+		margin:0 5px 0 0;
+	}
+	select{
+		margin:5px 0;
+	}	
+}
+.last-col{
+	@include last();
+}
+.wide-block{
+	@include col(12);
+	margin:0 10px;
+	article{
+		time,img{float:left;}
+		h3{
+			float:left;
+			clear:both;
+		}
+		p{
+			float:left;
+			margin:0 5px;
+			width:auto;
+		}
+	}
+}
+.btn-bar {
+	background: $content-bg;
+	border-top: 1px solid $content-border-color;
+	padding: 5px 10px 0;
+	clear: both;
+	position:relative;
+	overflow:auto;
+	margin:5px 0 0;
+}
+.legend{
+	p{
+		line-height:30px;
+		vertical-align:top;
+	}
+}

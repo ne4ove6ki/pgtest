@@ -1,0 +1,140 @@
+@import "global-vars";
+@import "header-vars";
+@import "style-mixins";
+@import "button-mixins";
+@import "headings-mixins";
+@import "grid";
+
+
+.mobile-header{
+	display:none;
+	/*@include gradient($headerGradientColor1,$headerGradientColor1);*/
+	overflow:auto;
+	.header-logo{
+		left:10px;
+		top:10px;
+		position:absolute;
+	}
+	nav{
+		float:right;
+		position:relative;
+		margin:10px;
+		h2{display:none;}
+		ul{
+			display:inline-block;
+			li{display:inline-block;float:left;}
+		}
+		a{
+			@include main-btn();
+			@include btn-styles();
+			margin-left:.5em;
+			position:relative;
+		}
+		p{
+			display:inline-block;
+			margin-left:4px;
+		}
+	}
+	.menu-trigger,.search-trigger,.login-trigger{
+		display:inline-block;
+		width:21px;	
+		height:22px;
+		margin:0 auto;
+		padding-top:.2em;
+		vertical-align:middle;
+	}
+	.menu-trigger{
+		background:url(../img/top-menu.png) 0 2px no-repeat;
+	}
+	.search-trigger{
+		background:url(../img/top-menu.png) -47px 1px  no-repeat;
+	}
+	.login-trigger{
+		background:url(../img/top-menu.png) -89px 0 no-repeat;
+	}
+}
+/* Modal box */
+	#cboxLoadedContent{
+			background-color:$content-bg;
+			@include rounded();
+	}
+	.modal-box{
+		width:100%;
+		padding: 1em 1.5em 1.5em;
+		overflow:auto;
+		margin:0;
+		@include boxSizing();
+	}
+	h1{@include h1(); margin-bottom:15px;}
+	nav.mobile-nav{
+		float:none;
+		article{
+			margin:15px 0;
+			a{
+				@include main-btn(5px,20px,5px,20px);
+				@include btn-styles();
+				float:none;
+				display:block;
+				text-decoration:none;
+				margin:0;
+			}
+			h2{font-size:16px;}
+		}
+	}
+	.search-wrapper{
+		input[type=text]{
+			width:100%;
+			@include boxSizing();
+			padding:5px 10px;
+			margin-bottom:10px;
+			color:#ccc;
+		}
+	}
+
+
+/*		Mobile Layout
+-------------------------------------------------------------------------------*/
+@media only screen and (max-width: 613px)  {
+	#top_header{height:auto;}
+	.desktop-header{display:none;}
+	.mobile-header{
+		display:block;
+		position:relative;
+		margin:0 auto;
+	}
+}
+
+/*		Mobile Wide Layout: 480px.
+------------------------------------------------
+cols    1     2      3      4      5      6     
+px      68    146    224    302    380    458 */
+
+@media only screen and (min-width: 448px) and (max-width: 613px) {
+	.mobile-header{
+		@include widthCalc(6);
+	
+		nav li p{
+			display: none;
+		}
+	}
+}
+
+/*		Mobile Layout: 320px.
+		Gutters: 10px.
+		Outer margins: 10px.
+-----------------------------------------
+cols    1     2      3      4     
+px      68    146    224    302   */
+
+@media only screen and (max-width: 447px) {
+	.mobile-header{
+		@include widthCalc(4);
+
+		nav p{
+			display: none;
+		}
+	}
+}
+
+
+

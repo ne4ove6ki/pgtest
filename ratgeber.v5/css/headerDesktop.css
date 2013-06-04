@@ -1,0 +1,171 @@
+#top_header {
+background-color:#003b7a;
+background-image:-webkit-gradient(linear,left top,left bottom,from(#003b7a),to(#002c5b));
+background-image:-webkit-linear-gradient(top,#003b7a,#002c5b);
+background-image:-moz-linear-gradient(top,#003b7a,#002c5b);
+background-image:-ms-linear-gradient(top,#003b7a,#002c5b);
+background-image:-o-linear-gradient(top,#003b7a,#002c5b);
+background-image:linear-gradient(to bottom,#003b7a,#002c5b);
+position: fixed;
+top: 0;
+left: 0;
+z-index: 100000;
+	height:52px;
+width:100%;
+}
+
+.desktop-header #nav{position:relative;display:inline-block;float:right;}
+.desktop-header #nav .active ul {display:block;border: 1px solid #ccc;}
+.desktop-header #nav ul ul { display:none; position:absolute; z-index:999; }
+.desktop-header #nav li{float:right;}
+.desktop-header #nav li li { 
+	float:left; padding:0; margin:0; width:100%;
+	padding:8px 10px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+.desktop-header #nav li a{color:#fff;}
+.desktop-header #nav li li a{color:#1f6ab7;}
+
+.desktop-header #nav-list{
+	float:none;
+	width:166px;
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	display:none;
+	position:absolute;
+	left:0;
+	
+}
+.desktop-header #nav-list li:last-child{ border-bottom: none;}
+.desktop-header #nav-list li.wNav{border-bottom:1px dashed #ddd;}
+.desktop-header .bN{border-bottom:none;}
+
+.desktop-header #nav li li.cNav{border-top:1px solid #ccc;}
+
+.desktop-header #search-wrapper input[type=text]{
+	background:#f3f3f3;
+	width:50%;
+	margin-right:8px;
+
+}
+#header-wrapper{
+	width:1114px;
+	margin:0 auto;
+	position:relative;
+
+}
+.desktop-header{
+	width:946px;
+}
+.desktop-header #chip-logo{
+  float:left;
+  display:block;
+  width:115px;
+  height:40px;
+  background:url(../img/logo.png) 5px 4px no-repeat;
+	margin:4px 0 5px;
+}
+.desktop-header .icon {
+	display:inline-block;
+	padding: 20px 24px 15px 10px;
+	background: url(../img/icons.png) 0 11px no-repeat;
+}
+.desktop-header .icon-search2 {
+display: inline-block;
+height: 30px;
+background: url(../img/sucheBtn.png) transparent 2px 6px no-repeat;
+width: 26px;
+padding: 3px 0 0 0;
+}
+.desktop-header #search-wrapper input[type=text] {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin-bottom: 10px; }
+.desktop-header .ui-header-button{
+	display: block;
+	padding: 7px 11px 10px;
+	height:35px;
+	cursor: pointer;
+	border-left: transparent;
+	border-right:  transparent;
+	border-bottom: transparent;
+	border-top: transparent;
+	background-color: transparent;
+	color:#fff;
+	outline: none;
+	border-right:1px solid #003b7a;
+}
+.desktop-header .ui-header-button .txt{
+	display:inline-block;
+	vertical-align:bottom;
+	margin-top:17px;
+}
+.desktop-header .ui-header-button:hover, .ui-header-button:active, .active .ui-header-button {
+	background: #1f6ab7 !important;
+text-decoration:none;
+}
+.desktop-header #searchform{
+  display:inline-block;
+  position: absolute;
+  top: 10px;
+  left: 328px;
+}
+.desktop-header #searchform input[type="text"]{
+  width: 244px;
+  height: 31px;
+  padding:0 10px;
+  color:#999;
+}
+.desktop-header .tipps-home{
+	color:#fff;
+	display:inline-block;
+	font-size:22px;
+	padding: 18px 0 6px 5px;
+}
+.desktop-header .s-btn {
+  height:35px;
+  margin: -1px 0 0 -12px;
+  display: inline-block;
+  padding: 0 4px 0 6px;
+  font: normal 12px/18px "Segoe UI", Arial, Helvetica, sans-serif;
+  vertical-align: top;
+  position: relative;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1f6fbe), to(#185592));
+  background: -webkit-linear-gradient(bottom, #185592, #1f6fbe);
+  background: -moz-linear-gradient(bottom, #185592, #1f6fbe);
+  background: -o-linear-gradient(bottom, #185592, #1f6fbe);
+  background: -ms-linear-gradient(bottom, #185592, #1f6fbe);
+  background: linear-gradient(bottom, #185592, #1f6fbe);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#1f6fbe , EndColorStr= #185592);
+  text-shadow: 1px 1px #333333;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  border: 1px solid #003073;
+}
+.desktop-header .s-btn:hover {
+    background: #1e68b3;
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 0 5px black;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 0 5px black;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 0 5px black;
+    text-decoration: none; 
+		border:1px solid #000;
+		}
+.desktop-header .s-btn:active {
+    background: #1f6ab7;
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.6); }

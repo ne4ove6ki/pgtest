@@ -1,0 +1,56 @@
+@import "grid";
+@import "global-vars";
+@import "style-mixins";
+@import "headings-mixins";
+
+.tippList{
+	@include col(8);
+	@include last();
+	margin-bottom:20px;
+	h3{
+		
+		@include h3();
+		color:$font-color-link;
+		border-bottom:1px solid $content-border-color;
+		margin:5px 0;
+		padding-bottom:5px;
+	}
+	ul{
+		@include col(4);
+		padding:0;
+		@include boxSizing();
+		li{
+			clear: left;
+			padding: 6px 0;
+			margin: 0;
+			border-bottom: 1px solid #CCC;
+			a{color: #666;}
+		}
+		&:last-child{@include last();padding-left: 20px;}
+	}
+}
+
+/*		Mobile Wide Layout: 480px */
+@media only screen and (min-width: 448px) and (max-width: 613px) {
+	.tippList{
+		@include col(6);
+		ul{
+			width:95%;
+			@include boxSizing();
+			padding: 0 0 0 10px;
+			&:last-child{@include last();padding: 0 0 0 10px;}
+		}
+	}
+}
+/*		Mobile Layout: 320px */
+@media only screen and (max-width: 447px) {
+	.tippList{
+		@include col(4);
+		ul{
+			width:95%;
+			@include boxSizing();
+			padding: 0 0 0 10px;
+			&:last-child{@include last();padding: 0 0 0 10px;}
+		}
+	}
+}

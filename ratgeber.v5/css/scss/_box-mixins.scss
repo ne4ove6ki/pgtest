@@ -1,0 +1,20 @@
+/*************_box-mixins.scss*************/
+@mixin panel-head{
+	background:$content-bg-light;
+	border-bottom:1px solid $content-border-color-dark;
+	@include rounded-side2(top,left);
+	@include rounded-side2(top,right);
+	position:relative;
+	padding:5px 0 5px 30px;
+	@include font(12px,bold);
+	position:relative;
+}
+@mixin panel-styles{
+	margin:10px $col_margin;
+	@include rounded(5px);
+	border:1px solid $content-border-color-dark;	
+	overflow:auto;
+	clear:both;
+	background:#fff;
+	@include boxSizing();
+}

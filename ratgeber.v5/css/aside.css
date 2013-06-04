@@ -1,0 +1,109 @@
+/*************_grid.scss*************/
+/*Column width:68px; Column margin:10px;*/
+/* total with of page */
+/* number of columns */
+/* margin between columns */
+/*************_global-vars.scss*************/
+/*************_style-mixins.scss*************/
+aside {
+  width: 302px;
+  margin-right: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: right;
+  margin-top: 15px; }
+  aside .s-btns {
+    float: right;
+    margin: -3px 0 8px; }
+  aside h3 {
+    clear: both;
+    padding: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333333;
+    border-bottom: 1px solid #CCC;
+    margin: 0 0 2px 0; }
+  aside hr {
+    border-bottom: 1px solid #cccccc;
+    clear: both;
+    padding: 5px 0; }
+  aside .pr-btn {
+    clear: both;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block; }
+  aside p {
+    margin-top: 10px; }
+  aside .sub {
+    font-size: 11px;
+    background: #f6f6f6;
+    margin: 0;
+    padding: 6px 4px 6px 8px; }
+  aside .asideList a.more {
+    color: #1f6ab7;
+    font-weight: bold;
+    text-align: right;
+    margin: 5px 7px 2px 0;
+    display: block;
+    margin-top: 0; }
+  aside ul {
+    list-style: none;
+    margin: 0;
+    padding: 2px 0 0; }
+    aside ul li {
+      clear: left;
+      padding: 6px 0;
+      margin: 0;
+      border-bottom: 1px solid #CCC; }
+      aside ul li span {
+        margin: 0 0 0 -16px;
+        padding: 1px 5px 0 0;
+        color: #1F6AB7;
+        font-size: 14px;
+        font-weight: bold; }
+      aside ul li a {
+        display: block;
+        padding: 0 0 0 22px;
+        color: #666 !important;
+        font-size: 12px;
+        line-height: 18px; }
+    aside ul.nP a {
+      padding: 0 0 0 10px; }
+
+.tipp-wr aside {
+  margin-top: 19px; }
+
+/*	Mobile Layout: 768px */
+@media only screen and (max-width: 903px) {
+  aside {
+    width: 100%;
+    float: left; }
+    aside .s-btns {
+      margin: -10px 5px -15px 0; }
+    aside h3 {
+      padding-left: 10px; }
+    aside ul li:nth-child(6), aside ul li:nth-child(7), aside ul li:nth-child(8), aside ul li:nth-child(9), aside ul li:nth-child(10) {
+      display: none; }
+
+  .tipp-wr aside {
+    margin-top: 10px; }
+
+  .tipp-wr aside .s-btns {
+    display: none; } }
+/*		Mobile Layout: 320px */
+@media only screen and (max-width: 447px) {
+  aside .s-btns {
+    margin: -10px 5px 10px 7px;
+    float: left; }
+
+  aside p {
+    margin-left: 10px;
+    margin-right: 10px; }
+
+  aside .pr-btn {
+    margin-left: 10px; }
+
+  .tipp-wr aside .s-btns {
+    display: none; } }

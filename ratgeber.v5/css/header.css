@@ -1,0 +1,221 @@
+/*************_global-vars.scss*************/
+/*************_style-mixins.scss*************/
+/*************_global.scss*************/
+a.pr-btn, input.pr-btn {
+  color: white; }
+
+/*************_headings.scss*************/
+/*************_global-vars.scss*************/
+/*************_style-mixins.scss*************/
+/*************_headings-mixins.scss*************/
+/*************_global-vars.scss*************/
+/*************_style-mixins.scss*************/
+h1, .huge {
+  font-size: 22px;
+  color: #666666;
+  font-weight: normal; }
+
+h2, h2 a {
+  font-size: 24px;
+  color: #333333;
+  font-weight: normal;
+  line-height: 28px; }
+
+h3, h3 a, .large {
+  font-size: 16px;
+  font-weight: normal;
+  color: #666666; }
+
+h3 a.important {
+  font-size: 1em; }
+
+h4, .bigger, h4 a, .bigger a {
+  font-size: 13px;
+  color: #333333; }
+
+h5, h5 a, .big {
+  font-size: 12px;
+  color: #333333; }
+
+h6 {
+  font-size: 16px;
+  color: #be2a42;
+  font-weight: normal;
+  margin: .5em; }
+
+/*************_grid.scss*************/
+/*Column width:68px; Column margin:10px;*/
+/* total with of page */
+/* number of columns */
+/* margin between columns */
+.mobile-header {
+  display: none;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#032c8e), to(#050d46));
+  background: -webkit-linear-gradient(bottom, #050d46, #032c8e);
+  background: -moz-linear-gradient(bottom, #050d46, #032c8e);
+  background: -o-linear-gradient(bottom, #050d46, #032c8e);
+  background: -ms-linear-gradient(bottom, #050d46, #032c8e);
+  background: linear-gradient(bottom, #050d46, #032c8e);
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#032c8e , EndColorStr= #050d46);
+  overflow: auto;
+  /* Modal box */ }
+  .mobile-header .header-logo {
+    left: 10px;
+    top: 10px;
+    position: absolute; }
+  .mobile-header nav {
+    float: right;
+    position: relative;
+    margin: 10px; }
+    .mobile-header nav h2 {
+      display: none; }
+    .mobile-header nav a {
+      display: inline-block;
+      padding: 4px 12px 4px 12px;
+      font: normal 12px/18px "Segoe UI", Arial, Helvetica, sans-serif;
+      vertical-align: top;
+      position: relative;
+      cursor: pointer;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      text-shadow: 1px 1px white;
+      background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f5f5f5), to(#e2e2e2));
+      background: -webkit-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+      background: -moz-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+      background: -o-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+      background: -ms-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+      background: linear-gradient(bottom, #e2e2e2, #f5f5f5);
+      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#f5f5f5 , EndColorStr= #e2e2e2);
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      border: 1px solid #cbcbcb;
+      -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px white;
+      -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px white;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px white;
+      color: #333333;
+      margin-left: .5em;
+      position: relative; }
+      .mobile-header nav a:hover {
+        -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px #cccccc;
+        -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px #cccccc;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px #cccccc;
+        background: white;
+        text-decoration: none; }
+      .mobile-header nav a:active {
+        background: #eeeeee;
+        -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+        -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.6); }
+    .mobile-header nav p {
+      display: inline-block; }
+  .mobile-header .menu-trigger, .mobile-header .search-trigger, .mobile-header .login-trigger {
+    display: inline-block;
+    width: 25px;
+    height: 22px;
+    margin: 0 auto;
+    padding-top: .2em;
+    vertical-align: middle; }
+  .mobile-header .menu-trigger {
+    background: url(../img/top-menu.png) 0px 0 no-repeat; }
+  .mobile-header .search-trigger {
+    background: url(../img/top-menu.png) -47px 0 no-repeat; }
+  .mobile-header .login-trigger {
+    background: url(../img/top-menu.png) -89px 0 no-repeat; }
+  .mobile-header #cboxLoadedContent {
+    background-color: #f3f3f3;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+  .mobile-header .modal-box {
+    width: 100%;
+    padding: 1em 1.5em 1.5em;
+    overflow: auto;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .mobile-header nav.mobile-nav {
+    float: none; }
+    .mobile-header nav.mobile-nav article {
+      margin: 10px 0; }
+      .mobile-header nav.mobile-nav article a {
+        display: inline-block;
+        padding: 10px 20px 10px 20px;
+        font: normal 12px/18px "Segoe UI", Arial, Helvetica, sans-serif;
+        vertical-align: top;
+        position: relative;
+        cursor: pointer;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-shadow: 1px 1px white;
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f5f5f5), to(#e2e2e2));
+        background: -webkit-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+        background: -moz-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+        background: -o-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+        background: -ms-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+        background: linear-gradient(bottom, #e2e2e2, #f5f5f5);
+        filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#f5f5f5 , EndColorStr= #e2e2e2);
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        border: 1px solid #cbcbcb;
+        -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px white;
+        -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px white;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px white;
+        color: #333333;
+        float: none;
+        display: block;
+        text-decoration: none;
+        margin: 0; }
+        .mobile-header nav.mobile-nav article a:hover {
+          -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px #cccccc;
+          -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px #cccccc;
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px #cccccc;
+          background: white;
+          text-decoration: none; }
+        .mobile-header nav.mobile-nav article a:active {
+          background: #eeeeee;
+          -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+          -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.6); }
+  .mobile-header .search-wrapper input[type=text] {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin-bottom: 10px; }
+
+/*	Tablet Layout: 768px.
+		Gutters: 10px.
+		Outer margins: 10px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      
+px      68    146    224    302    380    458    536    614    */
+@media only screen and (min-width: 614px) and (max-width: 903px) {
+  .mobile-header {
+    position: relative;
+    width: 614px;
+    margin: 0 auto; } }
+/*		Mobile Layout
+-------------------------------------------------------------------------------*/
+@media only screen and (max-width: 903px) {
+  .mobile-header {
+    position: relative;
+    width: 458px;
+    margin: 0 auto; } }
+/*		Mobile Wide Layout: 480px.
+------------------------------------------------
+cols    1     2      3      4      5      6     
+px      68    146    224    302    380    458 */
+@media only screen and (min-width: 448px) and (max-width: 613px) {
+  .mobile-header {
+    position: relative;
+    width: 302px;
+    margin: 0 auto; }
+
+  .nav p {
+    display: none; } }

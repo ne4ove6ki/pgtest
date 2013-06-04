@@ -1,0 +1,48 @@
+@import "grid";
+@import "global-vars";
+@import "style-mixins";
+@import "headings-mixins";
+@import "format-mixins";
+
+.autor-info{
+	@include col(8);
+	@include last;
+	
+	div, p, ul,li{font-size:14px;
+	line-height:20px;}
+	ul{
+		@include list();
+	}
+	h4{margin-top:15px;margin-bottom:5px;}
+	.intro,.fazit{
+		margin-top:10px;
+		margin-bottom:10px;
+		font-weight:bold;
+	}
+	.pr-btn{clear:both;float:left; margin-top:10px; margin-bottom:10px;display:block;}
+}
+.chip-intro{
+	color:#666;
+}
+/*	Tablet Layout: 768px */
+@media only screen and (min-width: 614px) and (max-width: 903px) {
+	.autor-info{
+		@include col(8);
+		@include last;
+	}
+}
+/*		Mobile Wide Layout: 480px */
+@media only screen and (min-width: 448px) and (max-width: 613px) {
+	.autor-info{
+		@include col(6);
+		&>*{margin:0 10px 0 0;}
+	}
+}
+/*		Mobile Layout: 320px */
+@media only screen and (max-width: 447px) {
+	.autor-info{
+		@include col(4);
+		&>*{margin:0 10px;}
+	}
+
+}

@@ -1,0 +1,91 @@
+/*************_forms.scss*************/
+input, textarea, select {
+	@include font(12,normal,$font-color-standard);
+	border:1px solid $content-border-color-dark;
+	box-shadow: 1px 1px #999 inset;
+}
+input[type="text"],input[type="password"],input[type="search"],input[type="url"],input[type="email"],input[type="tel"],input[type="number"]{
+	height: 23px;
+	padding:  5px 5px 0 5px;
+	margin: 2px 0;
+}
+
+input[type="checkbox"],input[type="submit"]{width:auto;}
+
+input[type="checkbox"],input[type="radio"]{
+	border:none;	
+	box-shadow:none;
+	background:transparent;
+}
+textarea {
+	background: white;
+	border: 1px solid $content-border-color-dark;
+	padding:  0 5px;
+	width: 100%;
+}
+select{
+	padding-right:0;
+	height: 30px;
+	margin: 2px 0;
+	padding:  0 0 0 5px;
+	option{
+		vertical-align: top;
+	}
+}
+
+label{
+	clear:both;
+	margin:0;
+	padding:5px 0 0;
+	display:	inline-block;
+	vertical-align:top;
+	font-weight:bold;
+}
+.cbx-label{
+	font-weight:normal;
+	
+	vertical-align:top;
+	input{margin-right:5px;}
+}
+.cbx-wrapper{
+	padding:10px 0;
+	font-size:11px;
+	input{margin:0 5px 0 0;}
+	label{
+		margin:0 0 2px;
+		font-weight:normal;
+	}
+}
+.cbx-p label{
+	font-weight:normal;
+	vertical-align:top;
+	display:block;
+}
+
+.dropdown-auto{
+	width: auto;
+	float: left;
+	margin:0 .5px 0 0;
+}
+.info-block{
+	form{
+		overflow:hidden;
+	}
+}
+.sl-wrp{
+	clear:both;
+	float:left;
+	margin:20px 3% 10px;
+	input,select{
+		width:auto;
+		margin:0;
+	}
+	input[type="button"]{
+		margin:0 0 0 5px;
+	}
+	label{
+		display:block;
+		margin:0 0 5px 0;
+	}
+	.cbx-wrapper label{display:inline-block; margin:0 0 0 5px;line-height:5px;}
+}

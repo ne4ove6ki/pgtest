@@ -1,0 +1,86 @@
+/*************_global.scss*************/
+@import "global-vars";
+@import "grid";
+@import "style-mixins";
+
+body {
+	font:normal 12px $font-family-standart;
+	line-height: $body-line-height;
+	color:$font-color-standard;
+	background:#efefef;
+}
+a{
+	color:$font-color-link;
+	text-decoration:none;
+	&:hover{
+		text-decoration:underline;
+		cursor:pointer;
+	}
+}
+.important-link,.important,.imp{
+	color:$font-color-link-important;
+}
+ol{
+	list-style-image:url(../img/arrow.png);
+	margin:10px 0 10px 20px;
+	li{margin:10px 0;}
+}
+.fL{float:left;}
+.fR{float:right;}
+
+/*	Default Layout: 926px. 
+		Gutters: 10px.
+		Outer margins: 10px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10      11      12
+px      68    146    224    302    380    458    536    614    692    770     848     926 */
+.main-wrapper{
+	width:$width+2*$col_margin;
+	padding:0 0 20px 0;
+	margin:0 auto;
+	border:1px solid #ccc;
+	border-bottom:none;
+	background:#fff;
+	overflow:hidden;
+	min-height:500px;
+	padding:0 15px 20px 15px;
+	@include boxSizing();
+}
+/*	Tablet Layout: 768px.
+		Gutters: 10px.
+		Outer margins: 10px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      
+px      68    146    224    302    380    458    536    614    */
+
+@media only screen and (min-width: 614px) and (max-width: 903px) {
+	.main-wrapper{
+		@include widthCalc(8);
+	}
+}
+/*		Mobile Wide Layout: 480px.
+		Gutters: 10px.
+		Outer margins: 10px.
+------------------------------------------------
+cols    1     2      3      4      5      6     
+px      68    146    224    302    380    458 */
+
+@media only screen and (min-width: 448px) and (max-width: 613px) {
+	.main-wrapper{
+		@include widthCalc(6);
+	}
+}
+/*		Mobile Layout: 320px.
+		Gutters: 10px.
+		Outer margins: 10px.
+-----------------------------------------
+cols    1     2      3      4     
+px      68    146    224    302   */
+
+@media only screen and (max-width: 447px) {
+	.main-wrapper{
+		@include widthCalc(4);
+	}
+}
+
+

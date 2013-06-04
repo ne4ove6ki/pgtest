@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<title>CHIP Praxistipps</title>
+ <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="css/01-reset.css"/>
+<link rel="stylesheet" href="css/colorbox.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/grid.css">
+<link rel="stylesheet" href="css/touchcarousel.css">
+<link rel="stylesheet" type="text/css" href="css/grey-blue-skin.css" />
+<link rel="stylesheet" type="text/css" href="css/three-d-skin.css" />
+
+<link rel="stylesheet" href="css/headerDesktop1.css">
+<link rel="stylesheet" href="css/headerMobile.css">
+<link rel="stylesheet" href="css/icons.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/top-section.css">
+<link rel="stylesheet" href="css/breadcrumbs.css">
+<link rel="stylesheet" href="css/tab-menu.css">
+<link rel="stylesheet" href="css/tipp.css">
+<link rel="stylesheet" href="css/block.css">
+<link rel="stylesheet" href="css/aside.css">
+<link rel="stylesheet" href="css/tags.css">
+<link rel="stylesheet" href="css/list.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/search.css">
+<link rel="stylesheet" href="css/ad.css">
+<link rel="stylesheet" href="css/adtech.css">
+<link rel="stylesheet" href="css/custom.css">
+
+
+
+<style>
+.horizAd { 
+	margin: 5px 0px 0px;
+}
+aside h3{padding-top:15px;}
+.main-wrapper, .ad-wrapper { 
+padding-top: 10px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/jquery.colorbox.js"></script>
+<script src="js/jquery.touchcarousel-1.2.min.js"></script>
+<script src="js/jquery.raty.js"></script>
+
+</head>
+<body>
+<!----Header---->
+<header id="top_header">
+	<div class="header-wrapper">
+<div class="desktop-header">
+    <div class="header-logo">
+      <a title="CHIP Online" href="http://www.chip.de">
+        <img alt="CHIP Online" src="http://chip01.chipimages.de/i/headfoot/chip-online-logo.gif">
+      </a>
+    </div>
+    <nav id="main_menu">
+      <ul>
+        <li>
+          <a title="Test &amp; Kaufberatung" href="http://www.chip.de/Test_12430122.html">Test &amp; Kaufberatung</a>
+        </li>
+        <li>
+          <a title="News" href="http://www.chip.de/News_29559209.html">News</a>
+        </li>
+        <li>
+          <a title="Downloads" href="http://www.chip.de/Downloads_13649224.html">Downloads</a>
+        </li>
+        <li>
+          <a title="Handy" href="http://www.chip.de/handy/">Handy</a>
+        </li>
+        <li>
+          <a title="Business" href="http://business.chip.de/">Business</a>
+        </li>
+        <li>
+          <a title="Community" href="http://forum.chip.de">Community</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="search">
+      <form id="suchform" accept-charset="utf8" action="searchY.php" name="suchform">
+        <input value="" id="suche_header_input" name="q">
+        <button class="submit" type="submit" name="submit">
+          Suche
+        </button>
+      </form>
+    </div>
+    <div class="navigation"></div>
+  </div>
+</div><!--/header-wrapper-->    <div id="header-wrapper" class="mobile-header">
+		<a href="index.php"><div id="chip-logo"></div></a>
+    <ul id="nav">
+      <li ><a href="" class="ui-header-button"><span class="icon hotdog  fl"></span><span class="txt">Menü</span></a>
+        <ul id="nav-list">
+          <li><a href="index.php">Praxistipps Home</a></li>
+          <li><a href="cat.php">Kategorien</a></li>
+					<li><a href="index2.php">Beliebteste Praxistipps</a></li>
+					<li><a href="index1.php">Neueste Praxistipps</a></li>
+        </ul>
+      </li>
+      <li>
+				<a href="" class="ui-header-button"><span class="icon-search hotdog fl"></span><span class="txt">Suche</span></a>
+        <ul id="search-wrapper">
+					<li >
+             <input type="text" onfocus="if(this.value == 'Nach Praxistipp suchen') { this.value = ''; }" value="Nach Praxistipp suchen">
+              <a href="/searchY.php" class="pr-btn" >Suche</a>
+					</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+<script>
+jQuery(document).ready(function($) {
+    //$('#nav li ul').hide();
+    $('#nav li').on('click', function(){
+			 //alert($(this).children(a).href);
+			
+       $(this).next('.hidden').toggle();
+				$(this).toggleClass("active");
+				if($(this).siblings().hasClass('active')){
+					$(this).siblings().removeClass('active');
+				}	
+				return false;
+    });
+	$('#nav li li').on('click', function(){
+	var url = $(this).children('a').attr('href'); 
+	window.location = url;
+	}); 
+	$('#search-wrapper li').on('click', function(){
+	var url = $(this).children('a').attr('href'); 
+	window.location = "searchY.php";
+	}); 
+	
+});
+
+</script>  
+</header>
+
+<div class="ad-wrapper" style="padding-top:0;margin-top:-10px;">
+
+  <div class="main-wrapper">
+  <!--TOP SECTION-->
+    <section class="top-section">
+    
+     <a href="autorWerden.php" class="pr-btn"><span class="author-icon"></span>Autor werden</a>
+     <h1 style="padding-top:10px;">Willkommen im CHIP Praxistipps</h1>
+			<h4 style="font-size:12px;margin:10px 4% 30px; font-weight:normal;">CHIP hilft bei Problemen mit Android, iOS, Windows, Office, MacOS und mehr</h4>
+  </section>
+  <!--MAIN CONTENT SECTION-->
+  <section class="content-with-aside">
+  <!--ASIDE-->
+    <!--<img src="img/social-btns.png" alt=""  class="s-btns"/>-->
+  
+    <section class="catList">
+      <section class="tipp-cat">
+        
+
+      <section class="tipp-cat">
+        <h3>iOS Tipps</h3>
+        
+        <ul>
+          <li><a href="tipp-iOs.php">iPhone-Kontakte mit Facebook synchronisieren</a></li>
+          <li><a href="tipp-iOs.php">iPhone Simulator – die 3 besten Websites</a></li>
+          <li><a href="tipp-iOs.php">Verfügbarkeit von LTE bei Telekom, Vodafone </a></li>
+        </ul>
+        <a class="more" href="cat.php">...mehr</a>
+      </section><!--/tipp-cat--->
+      <section class="tipp-cat">
+        <h3>Android Tipps</h3>
+        
+        <ul>
+          <li><a href="tipp-app.php">Hintergrundbild auf einem Android-Handy ändern</a></li>
+          <li><a href="tipp-app.php">Samsung Galaxy: Kontaktdaten importieren</a></li>
+          <li><a href="tipp-app.php">Android: Russische Tastatur einrichten </a></li>
+        </ul>
+        <a class="more" href="catAndroid.php">...mehr</a>
+      </section><!--/tipp-cat--->
+        <h3>Internet Tipps</h3>
+        
+        <ul>
+          <li><a href="tipp.php">iPhone Simulator – die 3 besten Websites</a></li>
+          <li><a href="tipp.php">Runde Ecken in html bzw. CSS – so geht's</a></li>
+          <li><a href="tipp.php">Klaviernoten online gratis und legal herunterladen</a></li>
+        </ul>
+        <a class="more" href="cat.php">...mehr</a>
+      </section><!--/tipp-cat--->
+      <section class="tipp-cat">
+        <h3>MacOS Tipps</h3>
+        
+        <ul>
+          <li><a href="tipp.php">Mac-Taskmanager: Wie öffne ich ihn?</a></li>
+          <li><a href="tipp-office.php">Mac: Welche Magic-Mouse-Gesten gibt es?</a></li>
+          <li><a href="tipp-app.php">Champions League live am iPad gucken</a></li>
+        </ul>
+        <a class="more" href="cat.php">...mehr</a>
+      </section><!--/tipp-cat--->
+          <section class="tipp-cat">
+        <h3>MS Office Tipps</h3>
+        
+        <ul>
+          <li><a href="tipp-office.php">MS Office: Silbentrennung in Word aktivieren</a></li>
+          <li><a href="tipp-office.php">Word-Dokumente in PDF umwandeln</a></li>
+          <li><a href="tipp-office.php">PDF-Datei in Word umwandeln</a></li>
+        </ul>
+        <a class="more" href="catOffice.php">...mehr</a>
+      </section><!--/tipp-cat--->
+      <section class="tipp-cat">
+        <h3>Windows Tipps</h3>
+        
+        <ul>
+          <li><a href="tipp.php">Windows 8: Klassisches Startmenü zurückholen</a></li>
+          <li><a href="tipp.php">Energiesparplan ändern in Windows 8</a></li>
+          <li><a href="tipp.php">Festplatte spiegeln – so geht's</a></li>
+        </ul>
+        <a class="more" href="catWindows.php">...mehr</a>
+      </section><!--/tipp-cat--->
+      <section class="tipp-cat">
+        <h3>Sotware Tipps</h3>
+        
+        <ul>
+          <li><a href="tipp.php">PDF-Datei in Word umwandeln</a></li>
+          <li><a href="tipp-office.php">Querformat bei Open Office einstellen</a></li>
+          <li><a href="tipp-app.php">mp3 in iTunes erstellen: so geht's</a></li>
+        </ul>
+        <a class="more" href="cat.php">...mehr</a>
+      </section><!--/tipp-cat--->
+      <section class="tipp-cat">
+        <h3>Hardware Tipps</h3>
+        
+        <ul>
+          <li><a href="tipp.php">Mac: Welche Magic-Mouse-Gesten gibt es?</a></li>
+          <li><a href="tipp-office.php">Zeitungen und Zeitschriften auf dem Kindle lesen</a></li>
+          <li><a href="tipp-app.php">Kein Sound am PC: Daran kann es liegen</a></li>
+        </ul>
+        <a class="more" href="cat.php">...mehr</a>
+      </section><!--/tipp-cat--->
+
+      <section class="tipp-cat">
+        <h3>TV Tipps</h3>
+        
+        <ul>
+          <li><a href="tipp.php">LG-Fernseher mit dem Internet verbinden</a></li>
+          <li><a href="tipp-office.php">NDR Mediathek: Hier finden Sie sie</a></li>
+          <li><a href="tipp-app.php">Online bei der GEZ anmelden: So funktioniert's</a></li>
+        </ul>
+        <a class="more" href="cat.php">...mehr</a>
+      </section><!--/tipp-cat--->
+      <section class="tipp-cat">
+        <h3>Playstation Tipps</h3>
+        
+        <ul>
+          <li><a href="tipp.php">Windows 8: Klassisches Startmenü zurückholen</a></li>
+          <li><a href="tipp-office.php">MS Office: Silbentrennung in Word aktivieren</a></li>
+          <li><a href="tipp-app.php">Hintergrundbild auf einem Android-Handy ändern</a></li>
+        </ul>
+        <a class="more" href="cat.php">...mehr</a>
+      </section><!--/tipp-cat--->
+    </section><!--/catList-->
+     <!--ASIDE-->
+<aside>
+
+  <section class="topList">
+    <h3>Beliebteste Praxistipps<a title="Top-Beiträge" href="fav.php" target="_blank" onFocus="this.blur(); return false;">
+        </a>
+    </h3>
+    <p class="sub">
+      <a href="fav.php" class="bl-b">Die beliebteste Tipps &amp; Tools</a>
+    </p>
+    <div class="asideList">
+      <ul>
+        <li><a href="tipp.php"><span>1</span>Software Testsieger 2012: Die besten Programme</a></li>
+        <li><a href="tipp.php"><span>2</span>Bestes Antivirenprogramm im Test (Herbst 2012)</a></li>
+        <li><a href="tipp.php"><span>3</span>iPhone Jailbreak und Unlock: So geht's</a></li>
+        <li><a href="tipp.php"><span>4</span>Windows-Check: So halten Sie Ihren PC flott</a></li>
+        <li><a href="tipp.php"><span>5</span>Windows 7: Neu installieren mit kostenlosem ISO</a></li>
+        <li><a href="tipp.php"><span>6</span>Virenscanner im Vergleich: AV-Test prüft 23 Sicherheits-Suiten</a></li>
+        <li><a href="tipp.php"><span>7</span>Mediathek Download - ARD, ZDF, Sat.1, Pro7, BR, ORF, MTV &amp; Co.</a></li>
+        <li><a href="tipp.php"><span>8</span>PDF zusammenfügen</a></li>
+        <li><a href="tipp.php"><span>9</span>Bundesliga live sehen - im Internet deutsch und gratis</a></li>
+        <li><a href="tipp.php"><span>10</span>PDF verkleinern</a></li>
+      </ul>
+      <p><a title="" href="fav.php" class="more">...mehr</a></p>
+    </div>
+  </section><!--/topList-->
+	<div class="asideAd1"><img src="img/werbung/302square.jpg" /></div>
+</aside>     <section class="tagList">
+  <h3>Beliebteste Tags</h3>
+  <a href="">Schnäppchen</a>
+  <a href="">Software</a>
+  <a href="">Internet</a>
+  <a href="">Freiziet</a>
+  <a href="">Computerspiel</a>
+  <a href="">Betriebssystem</a>
+  <a href="">Windows</a>
+  <a href="">Netzwerk</a>
+  <a href="">Fotos</a>
+  <a href="">iTunes</a>
+</section>
+  </section><!--/content-with-aside-->
+
+  </div><!--/main-wrapper-->
+  <div class="skyscraper">
+  <img src="img/werbung/highscraper.jpg"/>
+	</div>
+</div><!--/ad-wrapper-->
+ <footer class="footer">
+  <div class="ratgeber-footer">
+    <ul>
+      <li><a href="index.php" title="Archiv">Praxistipps Home</a></li>
+      <li><a href="cat.php" title="Neueste Themen">Kategorien</a></li>
+      <li><a href="index2.php" title="Beliebteste Themen">Beliebteste</a></li>
+      <li><a href="index1.php" title="Neueste Themen">Neueste</a></li>
+      <li><a href="#" class="special" rel="nofollow">Autor werden</a></li>
+    </ul>
+  </div>
+  <div class="general-footer">
+    <ul>
+      <li><a href="http://www.chip.de/c1_impressum/c1_impressum_13396219.html" rel="nofollow">Impressum</a></li>
+      <li><a href="http://www.chip.de/s_specials/Nutzungshinweis-CHIP-Online_45829065.html" rel="nofollow">Nutzungshinweis</a></li>
+      <li><a href="http://www.chip.de/s_specials/Datenschutz-CHIP-Online_45829526.html" rel="nofollow">Datenschutz</a></li>
+      <li><a href="http://www.chip.de/ueberblick.html" title="Überblick">CHIP Online</a></li>
+    </ul>
+  </div>
+</footer></body>
+</html>

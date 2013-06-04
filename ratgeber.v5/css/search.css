@@ -1,0 +1,154 @@
+/*************_grid.scss*************/
+/*Column width:68px; Column margin:10px;*/
+/* total with of page */
+/* number of columns */
+/* margin between columns */
+/*************_global-vars.scss*************/
+/*************_style-mixins.scss*************/
+/*************_headings-mixins.scss*************/
+/*************_global-vars.scss*************/
+/*************_style-mixins.scss*************/
+.rSearch {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  clear: both;
+	margin:10px 0 0 -5px;
+	}
+  .rSearch .swr {
+    position: absolute;
+    top: 15px;
+    left: 262px; }
+    .rSearch .swr input {
+      position: absolute;
+      top: 13px;
+      left: 15px;
+      font-size: 18px;
+      color: #999999;
+      font-weight: normal;
+      border: none;
+      outline: none;
+      width: 300px; }
+    .rSearch .swr a {
+      display: inline-block;
+      width: 60px;
+      height: 40px;
+      position: absolute;
+      top: 0;
+      right: 0; }
+  .rSearch .pL {
+    left: 0;
+    top: 0; }
+
+.searchResults {
+  float: left;
+  margin-right: 0;
+  width: 604px;
+  margin-right: 0;
+  margin: 0 0 20px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .searchResults h2 {
+    font-size: 20px;
+    color: #333333;
+    font-weight: normal;
+    line-height: 28px;
+    margin: 0 0 2px;
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 3px 0; }
+  .searchResults .sortFilter {
+    background: #f6f6f6;
+    padding: 5px 10px;
+    overflow: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .searchResults .sortFilter .sort {
+      float: left; }
+      .searchResults .sortFilter .sort a {
+        margin: 0 5px; }
+      .searchResults .sortFilter .sort a.active {
+        color: #1F6AB7;
+        font-weight: bold; }
+    .searchResults .sortFilter .filter {
+      float: right; }
+    .searchResults .sortFilter select {
+      font-size: 11px;
+      padding-left: 5px; }
+  .searchResults .result {
+    border-bottom: 1px dotted #ccc;
+    padding: 10px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: auto; }
+    .searchResults .result h3 {
+      padding: 0;
+      font-size: 14px;
+      color: #1f6ab7;
+      font-weight: normal; }
+    .searchResults .result .wp {
+      float: left;
+      display: inline-block;
+      width: 80%;
+      padding-left: 15px; }
+      .searchResults .result .wp p:hover, .searchResults .result .wp h3:hover {
+        text-decoration: underline; }
+    .searchResults .result .type {
+      font-size: 12px;
+      color: #666666;
+      font-weight: normal; }
+    .searchResults .result p {
+      font-size: 13px;
+      color: #333333;
+      font-weight: normal;
+      padding: 0 20px 0 0; }
+    .searchResults .result ul, .searchResults .result ol {
+      clear: both;
+      list-style-image: url(../img/arrow.png);
+      margin: 10px 0 10px 20px; }
+
+/*	Tablet Layout: 768px */
+@media only screen and (min-width: 614px) and (max-width: 903px) {
+  .rSearch .swr {
+    left: 115px; }
+
+  .searchResults {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 10px; } }
+/*		Mobile Wide Layout: 480px */
+@media only screen and (min-width: 448px) and (max-width: 613px) {
+  .rSearch {
+    display: none; }
+
+  .searchResults {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 10px; }
+
+  .searchResults .sortFilter .filter {
+    float: left;
+    margin-top: 5px; } }
+/*		Mobile Layout: 320px */
+@media only screen and (max-width: 447px) {
+  .rSearch {
+    display: none; }
+
+  .searchResults {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 10px; }
+    .searchResults img {
+      display: none; }
+
+  .searchResults .sortFilter .filter {
+    float: left;
+    margin-top: 5px; } }

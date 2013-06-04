@@ -1,0 +1,130 @@
+/*************_global.scss*************/
+@import "global-vars";
+@import "grid";
+@import "style-mixins";
+
+
+@mixin abs-center(){
+	position:absolute;
+	top:0;bottom:0;left:0;right:0;
+	margin:auto;
+}
+@mixin abs-right(){
+	position:absolute !important;
+	top:0;bottom:0;
+	right:10px;
+	margin:auto;
+}
+@mixin abs-left(){
+	position:absolute;
+	top:0;bottom:0;
+	left:10px;
+	margin:auto;
+}
+
+body {
+	font:normal 12px $font-family-standart;
+	line-height: $body-line-height;
+	color:$font-color-standard;
+	background:#efefef;
+}
+.main-wrapper{
+	width:$width+2*$col_margin;
+	padding:0;
+	margin:0 auto;
+	border:1px solid #ccc;
+	background:#fff;
+	overflow:auto;
+}
+.c-wrapper{
+	margin:0 10px;
+}
+a{
+	color:$font-color-link;
+	text-decoration:none;
+	&:hover{
+		text-decoration:underline;
+		cursor:pointer;
+	}
+}
+.important-link,.important,.imp{
+	color:$font-color-link-important;
+}
+a.open-all{
+	padding:.5em $content-padding-LR;
+	@include font(14,normal,$font-color-link-important);
+	float:right;
+}
+.content-bg{
+	border-bottom:1px solid $content-border-color;
+	padding:.5em $content-padding-LR 1em $content-padding-LR;
+	background-color:$content-bg;
+	overflow:auto;
+}
+.content-bg .open-all{
+	padding:.5em 0;
+}
+.title-sta{
+	margin:1em $content-padding-LR;
+}
+.sta{
+	position:relative;
+	margin:$col_margin;
+}
+.staH{
+	position:relative;
+	margin:0 $col_margin;
+}
+.staV{
+	position:relative;
+	margin:10px 0;
+}
+.noHPadding{
+	padding-left:0;
+}
+.noPadding{padding:0;}
+.fL{
+	float:left;
+	margin-left:$col_margin;
+}
+.fLC{
+	clear:both;
+	float:left;
+	margin-left:$col_margin;
+}
+.fR{
+	*clear:right;
+	float:right;
+	margin-right:$col_margin;
+}
+.bTop{
+	border-top:1px solid $content-border-color;
+}
+.content-wrapper{
+	border-top:1px solid $content-border-color-dark;
+	border-bottom:1px solid $content-border-color-dark;
+	background-color:$content-bg;
+	padding:$content-padding-TB $content-padding-LR;
+}
+.divider{
+	border-top:1px dashed #ccc;
+	margin:.5em 0;
+	clear:both;
+}
+.abs-right{
+	@include abs-right();
+}
+.left-wrapper{
+	width:	90%;
+}
+.left-wrapper-wide{
+	position:relative;
+}
+.cfx{clear:both;}
+.l-col{
+	@include col(6);
+}
+.r-col{
+	@include col(6);
+	@include last();
+}

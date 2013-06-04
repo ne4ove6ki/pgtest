@@ -1,0 +1,75 @@
+/*************_global.scss*************/
+@mixin main-btn($paddingVT:4px,$paddingHR:12px,$paddingVB:4px,$paddingHL:12px){
+	display:inline-block;
+	padding:$paddingVT $paddingHR $paddingVB $paddingHL;
+	font:normal 12px/18px $font-family-standart;
+	vertical-align:top;
+	position:relative;
+	cursor:pointer;
+	@include boxSizing();
+}
+@mixin btn-styles(){
+	@include textShadow($btn-text-shadow-color);
+	@include gradient($btn-dark-color,$btn-light-color);
+	@include rounded(4px);
+	border: 1px solid $btn-border-color;
+	@include boxShadowTransparent(.3,1);
+	color: $btn-font-color;
+	&:hover{
+		-moz-box-shadow: 0 1px 0 rgba(0,0,0,.2), inset 0 0 5px $btn-shadow-color;
+		-webkit-box-shadow: 0 1px 0 rgba(0,0,0,.2), inset 0 0 5px $btn-shadow-color;
+		box-shadow: 0 1px 0 rgba(0,0,0,.2), inset 0 0 5px $btn-shadow-color;
+		background:$btn-hover-color;
+		text-decoration:none;
+	}
+	&:active{
+		background:$tab-normal-color-dark;
+		@include boxShadowTransparent(.3,.6);
+	}
+}
+@mixin pr-btn-styles{
+	@include rounded(4px);
+	@include gradient($pr-btn-dark-color,$pr-btn-light-color);
+	@include textShadow($pr-btn-text-shadow-color);
+	@include boxShadowTransparent(0.5,.6);
+	border:1px solid $pr-btn-border-color;
+	&:hover{
+		background:$pr-btn-hover-color;
+		-moz-box-shadow: 0 1px 0 rgba(0,0,0,.1),inset 0 0 5px $pr-btn-shadow-color;
+    -webkit-box-shadow:0 1px 0 rgba(0,0,0,.1),inset 0 0 5px $pr-btn-shadow-color;
+	  box-shadow: 0 1px 0 rgba(0,0,0,.1), inset 0 0 5px $pr-btn-shadow-color;
+		text-decoration:none;
+	}
+	&:active{
+		background:#1f6ab7;
+		@include boxShadowTransparent(.5,.6);
+	}
+}
+a.pr-btn,input.pr-btn{color:$pr-btn-font-color;}
+
+@mixin btn-styles-hover(){
+	-moz-box-shadow: 0 1px 0 rgba(0,0,0,.2), inset 0 0 5px $btn-shadow-color;
+		-webkit-box-shadow: 0 1px 0 rgba(0,0,0,.2), inset 0 0 5px $btn-shadow-color;
+		box-shadow: 0 1px 0 rgba(0,0,0,.2), inset 0 0 5px $btn-shadow-color;
+		background:$btn-hover-color;
+		text-decoration:none;
+}
+@mixin img-btn($w:30px,$h:30px){
+	@include main-btn();
+	@include btn-styles();
+	width:$w;
+	height:$h;
+	padding:0;
+}
+
+@mixin ddTrigger($color){
+	width: 0; 
+	height: 0; 
+	border-left: 3px solid transparent;
+	border-top: 4px solid transparent;
+	border-right: 4px solid $color;
+	border-bottom: 3px solid $color;
+	position:absolute;
+	bottom:3px;
+	right:3px;
+}

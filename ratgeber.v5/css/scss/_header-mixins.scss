@@ -1,0 +1,18 @@
+@mixin gradient($color1,$color2){
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color2), to($color1));
+	background: -webkit-linear-gradient(bottom, $color1, $color2);
+	background: -moz-linear-gradient(bottom, $color1, $color2);
+	background: -o-linear-gradient(bottom, $color1, $color2);
+	background: -ms-linear-gradient(bottom, $color1, $color2);
+	background: linear-gradient(bottom, $color1, $color2);
+	filter: progid:DXImageTransform.Microsoft.Gradient( GradientType=0, StartColorStr=#{$color2} , EndColorStr= #{$color1});
+}
+@mixin rounded($radius:2px){
+	-moz-border-radius: #{$radius};
+	-webkit-border-radius: #{$radius};
+	border-radius: #{$radius};
+}
+@mixin border($position:all,$px:1px,$color:#fff){
+	@if($position==all){border:#{$px} solid #{$color};}
+	@else{border-#{$position}:#{$px} solid #{$color};}
+}

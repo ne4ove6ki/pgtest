@@ -1,0 +1,117 @@
+/*************_tab-menu.scss*************/
+@import "global-vars";
+@import "style-mixins";
+@import "button-mixins";
+
+.tab-menu{
+	position:relative;
+	clear:both;
+	margin:10px $col_margin 40px $col_margin;
+	z-index:100;
+	border-top: 1px solid $tab-normal-color-dark;
+	@include rounded();
+	@include gradient($tab-normal-color-dark,$tab-normal-color-light);
+	
+	.level-1 li{
+		float:left;
+		margin:-1px 0 -4px 0;	
+		margin:-2px 0 -3px 0\9;
+		*margin:-2px 0 0 0;	
+		padding: 7px 20px;
+		border-bottom:4px solid transparent;
+		border-left:1px solid $content-border-color-dark;
+		border-right:1px solid transparent;
+		border-top:1px solid transparent;
+		&:first-child{
+			@include rounded-side2(top,left);
+			@include rounded-side2(bottom,left);
+		}
+		&:last-child{
+			border-right: 1px solid $content-border-color-dark;
+			@include textShadow(#fff);
+		}
+		a{
+			color:#333;
+		}
+		.level-2 {
+			display:none;
+		}
+		&.activeTab,&:hover{
+			cursor:pointer;
+			@include gradient($tab-color-light,$tab-color-dark);
+			@include textShadow($tab-border);
+			border-top: 1px solid $tab-color-light;
+			border-bottom: 4px solid $tab-border;
+			border-left: 1px solid $tab-border;
+			border-right: 1px solid $tab-border;
+			
+			a{color: $tab-text-color; text-decoration:none;}
+		}
+		&.activeTab .level-2 {
+			position: absolute;
+			top:32px;
+			left:0;
+			width:100%;
+			display:block;
+			background-color: #CCC;
+			@include rounded-side2(bottom,left);
+			@include rounded-side2(bottom,right);
+			z-index:0;
+			li{
+				position:relative;
+				float:left;
+				padding:9px 20px;
+				border:none;
+				@include rounded(0);
+				&:hover {
+					background:transparent;
+					filter:none;
+				}
+				&.dd-menu{
+					background: url(../img/dd-arrow.png) no-repeat right 15px;
+					ul{
+						display:none;
+					}
+					&:hover{
+						background:#eee url(../img/dd-arrow.png) no-repeat right 15px;
+						ul.level-3{
+							display:block;
+							position:absolute;
+							top:32px;
+							left:0;
+							background-color: #EEE;
+							@include rounded-side2(bottom,left);
+							@include rounded-side2(bottom,right);
+							width:150px;
+							li{
+								float:none;
+								padding:5px 20px;
+								&:last-child{padding-bottom:12px;}
+							}
+						}
+					}
+				}
+				a{
+					color:#333;
+					text-shadow: 1px 1px #f6f6f6;
+					&:hover{color:$font-color-link;text-decoration:underline;}
+				}
+			}
+	}
+}
+	
+	.tab-border {
+		border-top:3px solid #ccc;
+		border-bottom:1px solid #999;
+		margin: -4px 0 0 0;
+		*height:0;
+		position:relative;
+		z-index: 100;
+		clear:both;
+		@include rounded-side2(bottom,left);
+		@include rounded-side2(bottom,right);
+	}
+}
+@media only screen and (max-width: 613px) {
+	.tab-menu{display:none;}	
+}

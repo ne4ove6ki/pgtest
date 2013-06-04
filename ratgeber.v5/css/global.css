@@ -1,0 +1,88 @@
+/*************_global.scss*************/
+/*************_global-vars.scss*************/
+/*************_grid.scss*************/
+/*Column width:68px; Column margin:10px;*/
+/* total with of page */
+/* number of columns */
+/* margin between columns */
+/*************_style-mixins.scss*************/
+body {
+  font: normal 12px "Segoe UI", Arial, Helvetica, sans-serif;
+  line-height: 18px;
+  color: #333333;
+  background: #efefef; }
+
+a {
+  color: #1f6ab7;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline;
+    cursor: pointer; }
+
+.important-link, .important, .imp {
+  color: #be2a42; }
+
+ol {
+  list-style-image: url(../img/arrow.png);
+  margin: 10px 0 10px 20px; }
+  ol li {
+    margin: 10px 0; }
+
+.fL {
+  float: left; }
+
+.fR {
+  float: right; }
+
+/*	Default Layout: 926px. 
+		Gutters: 10px.
+		Outer margins: 10px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10      11      12
+px      68    146    224    302    380    458    536    614    692    770     848     926 */
+.ad-wrapper {
+  margin: 0 auto;
+  width: 1112px; }
+
+.main-wrapper {
+  width: 946px;
+  padding: 0 0 20px 0;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  background: #fff;
+  overflow: hidden;
+  min-height: 500px;
+  padding: 0 15px 20px 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left; }
+
+/*	Tablet Layout: 768px.
+		Gutters: 10px.
+		Outer margins: 10px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      
+px      68    146    224    302    380    458    536    614    */
+@media only screen and (min-width: 614px) and (max-width: 903px) {
+  .main-wrapper, .ad-wrapper {
+    width: 614px; } }
+/*		Mobile Wide Layout: 480px.
+		Gutters: 10px.
+		Outer margins: 10px.
+------------------------------------------------
+cols    1     2      3      4      5      6     
+px      68    146    224    302    380    458 */
+@media only screen and (min-width: 448px) and (max-width: 613px) {
+  .main-wrapper, .ad-wrapper {
+    width: 458px; } }
+/*		Mobile Layout: 320px.
+		Gutters: 10px.
+		Outer margins: 10px.
+-----------------------------------------
+cols    1     2      3      4     
+px      68    146    224    302   */
+@media only screen and (max-width: 447px) {
+  .main-wrapper, .ad-wrapper {
+    width: 302px;
+    padding: 0 5px 20px 3px; } }

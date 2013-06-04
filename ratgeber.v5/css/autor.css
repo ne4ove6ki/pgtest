@@ -1,0 +1,62 @@
+/*************_grid.scss*************/
+/*Column width:68px; Column margin:10px;*/
+/* total with of page */
+/* number of columns */
+/* margin between columns */
+/*************_global-vars.scss*************/
+/*************_style-mixins.scss*************/
+/*************_headings-mixins.scss*************/
+/*************_global-vars.scss*************/
+/*************_style-mixins.scss*************/
+.autor-info {
+  float: left;
+  margin-right: 0;
+  width: 594px;
+  margin-right: 0; }
+  .autor-info div, .autor-info p, .autor-info ul, .autor-info li {
+    font-size: 14px;
+    line-height: 20px; }
+  .autor-info ul {
+    list-style-image: url(../img/arrow.png);
+    list-style-position: outside;
+    padding: 0 0 0 15px; }
+  .autor-info h4 {
+    margin-top: 15px;
+    margin-bottom: 5px; }
+  .autor-info .intro, .autor-info .fazit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold; }
+  .autor-info .pr-btn {
+    clear: both;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block; }
+
+.chip-intro {
+  color: #666; }
+
+/*	Tablet Layout: 768px */
+@media only screen and (min-width: 614px) and (max-width: 903px) {
+  .autor-info {
+    float: left;
+    margin-right: 0;
+    width: 594px;
+    margin-right: 0; } }
+/*		Mobile Wide Layout: 480px */
+@media only screen and (min-width: 448px) and (max-width: 613px) {
+  .autor-info {
+    float: left;
+    margin-right: 0;
+    width: 438px; }
+    .autor-info > * {
+      margin: 0 10px 0 0; } }
+/*		Mobile Layout: 320px */
+@media only screen and (max-width: 447px) {
+  .autor-info {
+    float: left;
+    margin-right: 0;
+    width: 282px; }
+    .autor-info > * {
+      margin: 0 10px; } }

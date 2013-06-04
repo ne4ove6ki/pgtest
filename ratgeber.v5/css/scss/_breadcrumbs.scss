@@ -1,0 +1,46 @@
+/*************_breadcrumbs.scss*************/
+@import "global-vars";
+@import "style-mixins";
+
+.breadcrumbs{
+	margin: 5px 0 ;
+	overflow: auto;
+  clear:both;
+	float:left;
+	 li{
+		float:left;
+		font-size:11px;
+		padding:2px 0 0;
+		a{
+			color:$font-color-standard;
+		}
+		a, span{
+			font-size:11px;
+			font-family:$font-family-standart;
+		}
+		span:first-child{
+			margin:0 0 0 .5em;
+		}
+		&:first-child{
+			line-height:20px;
+			padding:0;
+			.current{
+				margin:0 0 0 5px;
+			}
+		}
+	}
+	.current{
+		color:$font-color-link;
+		font-weight:bold;
+	}
+	
+}
+.home{
+  float:left;
+  position:relative;
+	background:url('../img/home1.png') 0 0 no-repeat;
+	height:20px;
+  width:22px;
+  cursor:pointer;
+
+	}

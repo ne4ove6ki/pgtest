@@ -1,0 +1,121 @@
+@import "grid";
+@import "global-vars";
+@import "style-mixins";
+
+#top_header{
+	@include gradient(#050D46,#032C8E);
+	position:relative;
+	overflow:hidden;
+	height:80px;
+	width:100%;
+
+	.desktop-header{
+		float: none;
+		margin: 0 auto;
+		width: 946px;
+		height:80px;
+		position:relative;
+		font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+		
+		.header-logo {
+			position: absolute;
+			left: 10px;	
+			top:12px;
+			z-index: 25;
+		}
+	}
+}
+#top_header .desktop-header #main_menu {
+  @include gradient(#c5c5c5,#efefef);
+  zoom: 1;
+  border-bottom: 2px solid rgb(153, 204, 255);
+  height: 24px;
+  width: 946px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+#top_header .desktop-header ul {
+  padding-left: 165px;
+  border-bottom: 1px solid #fff;
+  width: 781px;
+	height:23px;
+}
+#top_header .desktop-header li {
+  float: left;
+  height: 23px;
+}
+#top_header .desktop-header li a {
+  font-size: 13px;
+  display: block;
+  height: 15px;
+  line-height: 15px;
+  padding: 3px 8px 5px 8px;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #8a8a8a;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  background-image: url(../images/tooltip.png);
+  background-position: 100% 10px;
+  background-repeat: no-repeat;
+}
+#top_header .desktop-header li:first-child a {
+  border-left-width: 0;
+}
+#top_header .desktop-header li:last-child a {
+  border-right-width: 0;
+}
+#top_header .desktop-header li:hover {
+  @include gradient(#b0d8ff,#def);
+  zoom: 1;
+}
+#top_header .desktop-header li a:hover {
+  border-color: #9dceff;
+  text-decoration: underline;
+}
+#top_header .desktop-header li:first-child a:hover {
+  border-left-width: 1px;
+  padding-left: 7px;
+}
+#top_header .desktop-header li:last-child a:hover {
+  border-right-width: 1px;
+  padding-right: 21px;
+}
+
+#top_header .desktop-header #search {
+  background-color: #495a92;
+  border-radius: 2px;
+  bottom: 10px;
+  display: block;
+  left: 170px;
+  padding: 5px 6px;
+  position: absolute;
+  border-top: 1px solid #5e6fa6;
+  border-left: 1px solid #5e6fa6;
+}
+#top_header .desktop-header #suche_header_input {
+  font-size: 14px;
+  height: 14px;
+  line-height: 14px;
+  padding: 4px;
+  width: 246px;
+  border: 1px solid #d27d00;
+  border-radius: 2px;
+}
+#top_header .desktop-header #search button {
+  font-size: 13px;
+  @include gradient(#fd9900,#fde4a3);
+  zoom: 1;
+  border: 1px solid #d27d00;
+  height: 23px;
+  line-height: 20px;
+  color: #b12000;
+  font-weight: bold;
+  width: 90px;
+  text-transform: uppercase;
+  cursor: pointer;
+	font-family:Arial;
+	*margin-left:3px;
+}

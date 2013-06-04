@@ -1,0 +1,28 @@
+/*************_headings-mixins.scss*************/
+@import "global-vars";
+@import "style-mixins";
+@mixin h1(){
+	@include font(22px,normal,$font-color-standard-h);
+}
+@mixin h2($px:22px){
+	@include font($px,normal,$font-color-text-heading);
+	line-height:28px;
+}
+@mixin h3(){
+	font-size: 16px;
+	font-weight:normal;
+	color:$font-color-standard-h;
+}
+@mixin h4(){
+	font-size: 13px;
+	color:$font-color-text-heading;
+}
+@mixin h5(){
+	font-size: $body-font-size;
+	color:$font-color-text-heading;
+}
+@mixin h6(){
+	@include font(16px,normal,$font-color-link-important);
+	margin:.5em;
+}
+

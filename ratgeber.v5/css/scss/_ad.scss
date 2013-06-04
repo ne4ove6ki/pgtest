@@ -1,0 +1,19 @@
+@import "grid";
+
+.skyscraper{
+	float:left;
+	@include col(2);
+	margin-left:2px;
+}
+.horizAd{
+	margin:5px 0 0;
+}
+.asideAd2{
+	margin:15px 0 0 0;
+	float:right;
+}
+
+@media only screen and (max-width: 903px) {
+	.skyscraper,.horizAd,.asideAd1,.asideAd2{display:none;}
+	.googleAd img{width:100%;min-width:100%;}
+}

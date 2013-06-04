@@ -1,0 +1,20 @@
+@mixin list{
+	list-style-image: url(../img/arrow.png);
+	list-style-position: outside;
+	padding: 0 0 0 15px;
+}
+@mixin standartBorder($side:bottom,$color:$content-border-color-dark){
+	border-#{$side}:1px solid $color;
+}
+@mixin hr($color:$content-border-color-dark){
+	border-bottom:1px solid $color;
+	clear:both;
+}
+@mixin standartFont(){
+	font-size:12px;
+	line-height:18px;
+}
+@mixin articleFont(){
+	font-size:14px;
+	line-height:20px;
+}

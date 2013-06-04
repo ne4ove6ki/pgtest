@@ -1,0 +1,91 @@
+/*************_global-vars.scss*************/
+/*************_style-mixins.scss*************/
+/*************_global.scss*************/
+a.pr-btn, input.pr-btn {
+  color: white; }
+
+/*************_grid.scss*************/
+/*Column width:68px; Column margin:10px;*/
+/* total with of page */
+/* number of columns */
+/* margin between columns */
+/***********GLOBAL RESET**************/
+html, body, div, p, h2, h3, h4, ul, ol, a, form, img, li {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #1f6ab7; }
+
+a:hover {
+  text-decoration: underline; }
+
+h1, h2, h3, h4 {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
+
+/***********HEADER RESET**************/
+#header-global {
+  height: 75px;
+  margin: 0 0 2px;
+  padding: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: url("http://chip01.chipimages.de/i/headfoot/header-global-bg.gif") repeat-x scroll left top #041c69;
+  /*@include gradient($header-dark-bg-color,$header-light-bg-color);*/ }
+
+#header-wrapper {
+  margin: 0 auto;
+  width: 946px; }
+
+#suchform label {
+  float: left;
+  color: #fff;
+  margin: 0 5px 0 5px;
+  clear: none; }
+
+.he-v1-radio {
+  margin: 0 0 0 0;
+  padding: 0; }
+
+#header-v3 #suche_header_input, #header-v3 #me-suche-header-suchstring.mod_suche_header_suchstring, #header-v3 #suchform-wrapper.suchform-wrapper-forum .he-v1-suchbox {
+  height: 17px; }
+
+#header-v3 {
+  width: 946px;
+  height: 26px;
+  display: inline-block;
+  color: white;
+  background: url(http://chip01.chipimages.de/i/headfoot/topnavi-grad.gif) repeat-x 0 0 #e8e8e8; }
+
+#header-v3 #suchform-wrapper {
+  margin-left: 30px; }
+
+#header-v3 .quickNav-forum {
+  padding: 17px 10px 0 20px;
+  float: left;
+  width: auto; }
+
+/***********FOOTER RESET**************/
+#footer-grey-global {
+  clear: both;
+  min-width: 926px;
+  background: url(http://chip01.chipimages.de/i/headfoot/footer-global-bg.gif) repeat-x left top; }
+
+#footer-grey-wrapper, #footer-black-wrapper, #footer-white-wrapper {
+  margin: 0 auto;
+  width: 946px;
+  overflow: hidden; }
+
+#se-footer {
+  width: 100%;
+  border-bottom: 1px solid #929496;
+  background: #fff; }
+
+#footer-white-global {
+  display: none; }
+
+#footer .footer-feature-box {
+  margin: 28px 1px 16px 0; }

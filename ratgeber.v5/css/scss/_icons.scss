@@ -1,0 +1,76 @@
+/*************_icons.scss*************/
+@import "global-vars";
+@import "style-mixins";
+@import "button-mixins";
+
+$spriteGrid: 25px;
+$iconMargin:auto;
+$catGrid: 60px;
+@mixin spriteV($n,$path,$grid,$startX:0,$startY:0,$color:#f3f3f3,$borderBottom:#ccc,$col:0) {
+   $x:$startX+$col*$catGrid*-1;
+	 $y: $startY -($n* $grid);
+	 background:$color url($path) #{$x} #{$y} no-repeat;
+	border-bottom:3px solid $borderBottom;
+	@include rounded();
+
+}
+@mixin icon($w:40px,$h:32px){
+	display:inline-block;
+	width:$w !important;
+	height:$h;
+	position:relative;
+	z-index:100;
+}
+@mixin icon-small($w:26px,$h:26px) {
+	display: inline-block;
+	width:$w;
+	height:$h;
+}
+.arrow-90{
+	@include abs-right();
+	background:url('../img/arrows.png') 0 -48px no-repeat;
+	@include icon-small();
+}
+.arrow-closed{
+	@include abs-right();
+	background:url('../img/arrows.png') 0 0 no-repeat;
+	@include icon-small();
+}
+.arrow-open{
+	@include abs-right();
+	background:url('../img/arrows.png') 0 -28 no-repeat;
+	@include icon-small();
+}
+
+@for $i from 0 through 10 {
+	.cat-#{$i} {
+			@include spriteV($i,'../img/categories.png',$catGrid,6px,6px);
+			@include icon($catGrid+10px,$catGrid+10px);
+	}
+	.cat-#{$i}:hover{
+		@include spriteV($i,'../img/categories.png',$catGrid,6px,6px,#1f6ab7,#004b94,1);
+	}
+}
+.icon-bg:before{
+	content: '';
+	padding:73px 0 0;
+	display:inline-block;
+}
+.icon-bg {
+	margin:0 10px 23px 0;
+	p{text-align:center;}
+}
+/*	Tablet Layout: 768px */
+@media only screen and (min-width: 614px) and (max-width: 903px) {
+	.cat-7,.cat-6,.cat-5{display:none;}
+}
+/*		Mobile Wide Layout: 480px */
+@media only screen and (min-width: 448px) and (max-width: 613px) {
+	.cat-9,.cat-8,.cat-7,.cat-6,.cat-5{display:none;}
+	.icon-bg{margin:0 5px 23px 0;}
+}
+/*		Mobile Layout: 320px */
+@media only screen and (max-width: 447px) {
+	.cat-9,.cat-8,.cat-7,.cat-6,.cat-5,.cat-4,.cat-3{display:none;}
+	.icon-bg{margin:0 5px 23px 0;}
+}

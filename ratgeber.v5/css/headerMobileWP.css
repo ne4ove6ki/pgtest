@@ -1,0 +1,33 @@
+/*		Mobile Layout
+-------------------------------------------------------------------------------*/
+@media only screen and (max-width: 613px) {
+  #top_header {
+    height: auto; }
+
+  .desktop-header {
+    display: none; }
+
+  .mobile-header {
+    display: block;
+    position: relative;
+    margin: 0 auto; } }
+/*		Mobile Wide Layout: 480px.
+------------------------------------------------
+cols    1     2      3      4      5      6     
+px      68    146    224    302    380    458 */
+@media only screen and (min-width: 448px) and (max-width: 613px) {
+  .mobile-header {
+    width: 458px; }
+    .mobile-header nav li p {
+      display: none; } }
+/*		Mobile Layout: 320px.
+		Gutters: 10px.
+		Outer margins: 10px.
+-----------------------------------------
+cols    1     2      3      4     
+px      68    146    224    302   */
+@media only screen and (max-width: 447px) {
+  .mobile-header {
+    width: 302px; }
+    .mobile-header nav p {
+      display: none; } }

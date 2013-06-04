@@ -1,0 +1,170 @@
+/*************_icons.scss*************/
+/*************_global-vars.scss*************/
+/*************_style-mixins.scss*************/
+/*************_global.scss*************/
+a.pr-btn, input.pr-btn {
+  color: white; }
+
+.arrow-90 {
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  margin: auto;
+  background: #f3f3f3 url("../img/arrows.png") 1px -35px no-repeat;
+  border-bottom: 3px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 26px;
+  height: 26px; }
+
+.cat-0 {
+  background: #f3f3f3 url("../img/categories.png") 7px 3px no-repeat;
+  border-bottom: 3px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 70px !important;
+  height: 70px;
+  position: relative;
+  z-index: 100; }
+
+.cat-1 {
+  background: #f3f3f3 url("../img/categories.png") 7px -67px no-repeat;
+  border-bottom: 3px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 70px !important;
+  height: 70px;
+  position: relative;
+  z-index: 100; }
+
+.cat-2 {
+  background: #f3f3f3 url("../img/categories.png") 7px -137px no-repeat;
+  border-bottom: 3px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 70px !important;
+  height: 70px;
+  position: relative;
+  z-index: 100; }
+
+.cat-3 {
+  background: #f3f3f3 url("../img/categories.png") 7px -207px no-repeat;
+  border-bottom: 3px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 70px !important;
+  height: 70px;
+  position: relative;
+  z-index: 100; }
+
+.cat-4 {
+  background: #f3f3f3 url("../img/categories.png") 7px -277px no-repeat;
+  border-bottom: 3px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 70px !important;
+  height: 70px;
+  position: relative;
+  z-index: 100; }
+
+.cat-5 {
+  background: #f3f3f3 url("../img/categories.png") 7px -347px no-repeat;
+  border-bottom: 3px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 70px !important;
+  height: 70px;
+  position: relative;
+  z-index: 100; }
+
+.cat-6 {
+  background: #f3f3f3 url("../img/categories.png") 7px -417px no-repeat;
+  border-bottom: 3px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 70px !important;
+  height: 70px;
+  position: relative;
+  z-index: 100; }
+
+.cat-7 {
+  background: #f3f3f3 url("../img/categories.png") 7px -487px no-repeat;
+  border-bottom: 3px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 70px !important;
+  height: 70px;
+  position: relative;
+  z-index: 100; }
+
+.cat-8 {
+  background: #f3f3f3 url("../img/categories.png") 7px -557px no-repeat;
+  border-bottom: 3px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 70px !important;
+  height: 70px;
+  position: relative;
+  z-index: 100; }
+
+.cat-9 {
+  background: #f3f3f3 url("../img/categories.png") 7px -627px no-repeat;
+  border-bottom: 3px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 70px !important;
+  height: 70px;
+  position: relative;
+  z-index: 100; }
+
+.cat-10 {
+  background: #f3f3f3 url("../img/categories.png") 7px -697px no-repeat;
+  border-bottom: 3px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 70px !important;
+  height: 70px;
+  position: relative;
+  z-index: 100; }
+
+.icon-bg:before {
+  content: '';
+  padding: 73px 0 0;
+  display: inline-block; }
+
+.icon-bg {
+  margin: 0 0 23px 10px; }
+  .icon-bg p {
+    text-align: center; }
+
+/*	Tablet Layout: 768px */
+/*		Mobile Wide Layout: 480px */
+/*		Mobile Layout: 320px */
+@media only screen and (max-width: 447px) {
+  .cat-9, .cat-8, .cat-7, .cat-6, .cat-5, .cat-4, .cat-3 {
+    display: none; } }

@@ -1,0 +1,28 @@
+/*************_grid.scss*************/
+/*Column width:68px; Column margin:10px;*/
+$width: 926px; /* total with of page */ 
+$columns: 12; /* number of columns */ 
+$col_margin: 10px; /* margin between columns */ 
+$col_padding: 5px;
+
+$col_width: ($width - ($col_margin * ($columns - 1))) / $columns; 
+$col_total_width: $col_width + $col_margin; 
+@mixin row() { float: left; clear: both; width: $width; } 
+@mixin widthCalc($n: 12){width: ($n * $col_width) + (($n - 1) * $col_margin);  }
+@mixin col($n: 1) { float: left; @include span($n); } 
+@mixin colRight($n: 1) { @include span($n);float: right; margin:0;  } 
+@mixin span($n: 1) { 
+	$width:($n * $col_width) + (($n - 1) * $col_margin);
+	 
+  @if $n == $columns { margin-right: 0; width:$width;} 
+  @else { margin-right: 0; width: $width - $col_padding*2} 
+} 
+@mixin col-content($n: 1,$p:5) { 
+	width: ($n * $col_width) + (($n - 3) * $col_margin)-(2 * $p); 
+}
+@mixin first() { margin-left: 0; } 
+@mixin last() { margin-right: 0; } 
+@mixin bck($c: #ccc){background-color:$c;	opacity:.5;}
+@mixin prepend($n: 1) { margin-left: $col_total_width * $n } 
+@mixin append($n: 1) { margin-right: $col_total_width * $n + $col_margin }
+

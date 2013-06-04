@@ -1,0 +1,100 @@
+/*************_tab-menu.scss*************/
+@import "global-vars";
+@import "style-mixins";
+@import "button-mixins";
+
+.tab-menu{
+	position:relative;
+	clear:both;
+	margin:10px 0 5px 0;
+	z-index:100;
+	border-top: 1px solid $tab-normal-color-dark;
+	@include rounded();
+	@include gradient($tab-normal-color-dark,$tab-normal-color-light);
+	h2{display:none;}
+	.level-1 li{
+		position:relative;
+		float:left;
+		margin:-1px 0 -4px 0;	
+		margin:-2px 0 -3px 0\9;
+		*margin:-2px 0 0 0;	
+		padding: 7px 20px;
+		border-bottom:4px solid transparent;
+		border-left:1px solid $content-border-color-dark;
+		border-right:1px solid transparent;
+		border-top:1px solid transparent;
+		&:first-child{
+			@include rounded-side2(top,left);
+			@include rounded-side2(bottom,left);
+		}
+		&:last-child{
+			border-right: 1px solid $content-border-color-dark;
+			@include textShadow(#fff);
+		}
+		a{
+			color:#333;
+		}
+		.level-2 {
+			display:none;
+		}
+		&.activeTab,&:hover{
+			position:relative;
+			cursor:pointer;
+			@include gradient($tab-color-light,$tab-color-dark);
+			@include textShadow($tab-border);
+			border-top: 1px solid $tab-color-light;
+			border-bottom: 4px solid $tab-border;
+			border-left: 1px solid $tab-border;
+			border-right: 1px solid $tab-border;
+		a{color: $tab-text-color; text-decoration:none;}
+		.level-2 {
+			position: absolute;
+			top:36px;
+			left:0;
+			display:block;
+			margin: 0 0 0 -1px;
+			width:296px;
+			background-color: #CCC;
+			background-image:-webkit-linear-gradient(top, #f3f3f3 1px, transparent 1px),-webkit-linear-gradient(left, #f3f3f3 1px, transparent 1px);
+			background-image: -moz-linear-gradient(top, #f3f3f3 1px, transparent 1px), -moz-linear-gradient(left, #f3f3f3 1px, transparent 1px);
+			background-size: 25px 32px,99px 100px;
+			background-position: 0 125px, 0 0;
+			@include rounded-side2(bottom,left);
+			@include rounded-side2(bottom,right);
+		
+			li{
+				float:left;
+				padding:9px 20px;
+				width:58px;
+				border:none;
+				@include rounded(0);
+				&:hover {
+					background:transparent;
+					filter:none;
+				}
+				a{
+					color:#333;
+					text-shadow: 1px 1px #f6f6f6;
+					&:hover{color:$font-color-link;text-decoration:underline;}
+				}
+			}
+		}
+	}
+}
+	
+	.tab-border {
+		border-top:3px solid #ccc;
+		border-bottom:1px solid #999;
+		margin: -4px 0 0 0;
+		*height:0;
+		z-index: -1;
+		clear:both;
+		@include rounded-side2(bottom,left);
+		@include rounded-side2(bottom,right);
+	}
+}
+
+@media only screen and (max-width: 613px) {
+	.tab-menu{display:none;}	
+}
+

@@ -1,0 +1,3 @@
+function(e){
+1==e("article.hentry  .entry-content img").parents("article.hentry").length&&(e(".wp-caption").css("margin","0"),e(".entry-content img").parents(".entry-content").css("min-height","160px"),e(".entry-content img").parents("article.hentry").css("margin","0"),e(".entry-content img").parents("article.hentry").css("padding","0")),e("#nav li a.ui-header-button").click(function(){var t=e(this).parent();return t.next(".hidden").toggle(),t.toggleClass("active"),t.siblings().hasClass("active")&&t.siblings().removeClass("active"),!1})
+}

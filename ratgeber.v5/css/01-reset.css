@@ -1,0 +1,120 @@
+.content-w1{
+padding: 0 2.5%;
+}
+/*	Resets ------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+}
+
+.png {
+cursor: pointer;
+background: none;
+/* filter applies only to IE5+/Win */
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='fixed', src='http://domain.tld/path/image.png');
+}
+.png[class] {
+/* [class] applies to non-IE browsers */
+background: url(http://domain.tld/path/image.png) no-repeat;
+}
+* html .png a {
+/* make links clickable in IE */
+position: relative;
+z-index: 999;
+}
+
+/*
+*
+*  Consistency fixes
+*  adopted from http://necolas.github.com/normalize.css/
+*
+*/
+html {
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  min-height: 100%;
+  height:100%;
+  font-size: 100%;
+  min-width:320px;
+}
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+  display: block;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+b, strong {
+	font-weight: bold;
+}
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  font-size:100%;
+ 	vertical-align: baseline;
+  border: 1px #ccc solid;
+  background: #fff;
+  text-decoration:none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+textarea {
+	overflow: auto;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+nav ul {
+    list-style:none;
+}
+a img {border: 0;}
+a:hover input{text-decoration:none;}
+ul{list-style:none;}
+
+/*	Typography presets
+------------------	*/
+/*
+*
+*	Zoomable baseline grid
+*	type size presets
+*
+*/
+
+
+/* Selection colours (easy to forget) */
+::selection 	 	{background: rgb(255,255,158);}
+::-moz-selection 	{background: rgb(255,255,158);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+

@@ -1,0 +1,201 @@
+/*************_global-vars.scss*************/
+/*************_style-mixins.scss*************/
+/*************_global.scss*************/
+a.pr-btn, input.pr-btn {
+  color: white; }
+
+/*************_headings-mixins.scss*************/
+/*************_global-vars.scss*************/
+/*************_style-mixins.scss*************/
+/*************_grid.scss*************/
+/*Column width:68px; Column margin:10px;*/
+/* total with of page */
+/* number of columns */
+/* margin between columns */
+.mobile-header {
+  display: none;
+  /*@include gradient($headerGradientColor1,$headerGradientColor1);*/
+  overflow: auto; }
+  .mobile-header .header-logo {
+    left: 10px;
+    top: 10px;
+    position: absolute; }
+  .mobile-header nav {
+    float: right;
+    position: relative;
+    margin: 10px; }
+    .mobile-header nav h2 {
+      display: none; }
+    .mobile-header nav ul {
+      display: inline-block; }
+      .mobile-header nav ul li {
+        display: inline-block;
+        float: left; }
+    .mobile-header nav a {
+      display: inline-block;
+      padding: 4px 12px 4px 12px;
+      font: normal 12px/18px "Segoe UI", Arial, Helvetica, sans-serif;
+      vertical-align: top;
+      position: relative;
+      cursor: pointer;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      text-shadow: 1px 1px white;
+      background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f5f5f5), to(#e2e2e2));
+      background: -webkit-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+      background: -moz-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+      background: -o-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+      background: -ms-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+      background: linear-gradient(bottom, #e2e2e2, #f5f5f5);
+      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#f5f5f5 , EndColorStr= #e2e2e2);
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      border: 1px solid #cbcbcb;
+      -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px white;
+      -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px white;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px white;
+      color: #333333;
+      margin-left: .5em;
+      position: relative; }
+      .mobile-header nav a:hover {
+        -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px #cccccc;
+        -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px #cccccc;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px #cccccc;
+        background: white;
+        text-decoration: none; }
+      .mobile-header nav a:active {
+        background: #eeeeee;
+        -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+        -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.6); }
+    .mobile-header nav p {
+      display: inline-block;
+      margin-left: 4px; }
+  .mobile-header .menu-trigger, .mobile-header .search-trigger, .mobile-header .login-trigger {
+    display: inline-block;
+    width: 21px;
+    height: 22px;
+    margin: 0 auto;
+    padding-top: .2em;
+    vertical-align: middle; }
+  .mobile-header .menu-trigger {
+    background: url(../img/top-menu.png) 0 2px no-repeat; }
+  .mobile-header .search-trigger {
+    background: url(../img/top-menu.png) -47px 1px no-repeat; }
+  .mobile-header .login-trigger {
+    background: url(../img/top-menu.png) -89px 0 no-repeat; }
+
+/* Modal box */
+#cboxLoadedContent {
+  background-color: #f3f3f3;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+.modal-box {
+  width: 100%;
+  padding: 1em 1.5em 1.5em;
+  overflow: auto;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+h1 {
+  font-size: 22px;
+  color: #666666;
+  font-weight: normal;
+  margin-bottom: 15px; }
+
+nav.mobile-nav {
+  float: none; }
+  nav.mobile-nav article {
+    margin: 15px 0; }
+    nav.mobile-nav article a {
+      display: inline-block;
+      padding: 5px 20px 5px 20px;
+      font: normal 12px/18px "Segoe UI", Arial, Helvetica, sans-serif;
+      vertical-align: top;
+      position: relative;
+      cursor: pointer;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      text-shadow: 1px 1px white;
+      background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f5f5f5), to(#e2e2e2));
+      background: -webkit-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+      background: -moz-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+      background: -o-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+      background: -ms-linear-gradient(bottom, #e2e2e2, #f5f5f5);
+      background: linear-gradient(bottom, #e2e2e2, #f5f5f5);
+      filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#f5f5f5 , EndColorStr= #e2e2e2);
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      border: 1px solid #cbcbcb;
+      -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px white;
+      -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px white;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px white;
+      color: #333333;
+      float: none;
+      display: block;
+      text-decoration: none;
+      margin: 0; }
+      nav.mobile-nav article a:hover {
+        -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px #cccccc;
+        -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px #cccccc;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px #cccccc;
+        background: white;
+        text-decoration: none; }
+      nav.mobile-nav article a:active {
+        background: #eeeeee;
+        -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+        -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.6); }
+    nav.mobile-nav article h2 {
+      font-size: 16px; }
+
+.search-wrapper input[type=text] {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  color: #ccc; }
+
+/*		Mobile Layout
+-------------------------------------------------------------------------------*/
+@media only screen and (max-width: 613px) {
+  #top_header {
+    height: auto; }
+
+  .desktop-header {
+    display: none; }
+
+  .mobile-header {
+    display: block;
+    position: relative;
+    margin: 0 auto; } }
+/*		Mobile Wide Layout: 480px.
+------------------------------------------------
+cols    1     2      3      4      5      6     
+px      68    146    224    302    380    458 */
+@media only screen and (min-width: 448px) and (max-width: 613px) {
+  .mobile-header {
+    width: 458px; }
+    .mobile-header nav li p {
+      display: none; } }
+/*		Mobile Layout: 320px.
+		Gutters: 10px.
+		Outer margins: 10px.
+-----------------------------------------
+cols    1     2      3      4     
+px      68    146    224    302   */
+@media only screen and (max-width: 447px) {
+  .mobile-header {
+    width: 302px; }
+    .mobile-header nav p {
+      display: none; } }

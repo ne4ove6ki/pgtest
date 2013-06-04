@@ -1,0 +1,90 @@
+/*************_dd-box.scss*************/
+.dd-box,.dd-box-wide{
+	@include col(3);
+	padding:10px 0 10px 15px;
+	background:$content-bg-light;
+	border:1px solid $content-border-color;
+	h1,h2{
+		margin:0 0 5px 0;
+	}
+	ul{
+		margin: 10px 10px 0 15px;
+		list-style-image: url(../img/arrow.png);
+		clear:both;
+	}
+	.new-activity{
+		padding:0;
+		margin: 15px 10px 10px 15px;
+		list-style-image: url(../img/arrow-red.png);
+		 a{
+			color:$font-color-link-important;
+			margin:5px 0 0;
+			}
+		}
+	label{
+		display:block;
+	}
+	input[type="submit"]{
+		margin: 10px 0 0;
+	}
+	input[type="text"]{
+		@include col-content(3,5);
+	}
+	select{
+		@include col-content(3,0);
+	}
+	.date-picker{
+		label{margin:5px 0;}
+		input[type="text"],select{
+			width:auto;
+			margin:0;
+			vertical-align:top;
+			
+		}
+	}
+	.cbx-gr{
+		label{
+			font-weight:normal;
+			clear:none;
+			float:left; 
+			padding:10px 10px 5px 0;
+			*padding:10px 5px 5px 0;
+			vertical-align:top;
+		}
+		input{margin:0 2px 0 0;}
+	}
+	.v-divider{
+		border-top:1px solid $content-border-color-dark;
+		height: 3px;
+		clear:both;
+	}
+}
+.dd-box-wide{
+	@include col(5);
+	padding:0 0 15px 0;
+	h1,h2{
+		margin:10px;	
+	}
+	.col-wrapper{
+		@include col(3);
+		input[type=text]{
+			margin:5px 0;
+		}
+		div{
+			padding: 0 10px 10px 10px;
+		}
+		.psw{display:block;}
+	}
+	.social{
+		@include col(2);
+		margin-right:0;
+		div{
+			border-left:1px dashed $content-border-color-dark;
+			padding:0 0 10px 15px;
+		}
+		.btn{
+			padding-top:2px;padding-bottom:2px;
+			margin: 5px 0 5px 0;
+		}
+	}
+}

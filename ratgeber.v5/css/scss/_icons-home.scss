@@ -1,0 +1,250 @@
+/*************_icons-home.scss*************/
+$spriteGrid: 25px;
+$iconMargin:auto;
+@mixin sprite($V,$H) {
+	$x:-($H * $spriteGrid);
+	$y:-($V * $spriteGrid);
+	background: url(../img/forum-sprites.png) $x $y  no-repeat;
+}
+@mixin spriteV($n,$path) {
+   $x:1px;
+	 $y:-($n* $spriteGrid);
+	 background:url($path) #{$x} #{$y} no-repeat;
+}
+@mixin icon($w:40px,$h:32px){
+	display:inline-block;
+	width:$w !important;
+	height:$h;
+	position:relative;
+	z-index:100;
+}
+@mixin icon-small($w:26px,$h:26px) {
+	display: inline-block;
+	width:$w;
+	height:$h;
+}
+@mixin icon-small-abs($w:26px,$h:26px) {
+	display: inline-block;
+	position: absolute;
+	width:$w;
+	height:$h;
+	top: 0;
+  bottom: 0;
+  left: 5px;
+  margin: $iconMargin;
+	*margin:5px 0 0;
+}
+.flat-btn{
+	padding: 3px;
+	border: 1px solid $content-border-color-dark;
+	border-radius: 5px;
+	background:#fff;
+	position:relative;
+	margin:0 3px 0;
+	@include icon-small();
+	.first-new{margin:4px 0 0 7px;}
+}
+.arrow{
+	@include abs-center();
+	@include spriteV(0,'../img/arrows.png');
+	@include icon-small();
+}
+.expanded .arrow {
+	@include spriteV(1,'../img/arrows.png');
+}
+.arrow-90{
+	@include abs-right();
+	@include spriteV(2,'../img/arrows.png');
+	@include icon-small();
+}
+.i-btn .arrow{
+	@include abs-center();
+}
+.close{
+	@include spriteV(4,'../img/arrows.png');
+	@include icon-small();
+	@include abs-center();
+}
+.dd-close{
+	@include spriteV(3,'../img/arrows.png');
+	@include icon-small();
+	position:absolute;
+	top:0;right:0;
+	cursor:pointer;
+}
+.icon00{
+	@include icon-small-abs();
+	@include sprite(0,0);
+}
+.icon01{
+	@include sprite(0,1);
+	@include icon-small-abs();
+}
+.icon02{
+	@include icon-small-abs();
+	@include sprite(0,2);
+}
+.icon03{
+	@include icon-small-abs();
+	@include sprite(0,3);
+}
+.icon10{
+	@include icon-small-abs();
+	@include sprite(1,0);
+}
+.icon11{
+	@include icon-small-abs();
+	@include sprite(1,1);
+}
+.icon12{
+	@include icon-small-abs();
+	@include sprite(1,2);
+}
+.icon13{
+	@include icon-small-abs();
+	@include sprite(1,3);
+}
+.icon20{
+	@include icon-small-abs();
+	@include sprite(2,0);
+}
+.icon21{
+	@include icon-small-abs();
+	@include sprite(2,1);
+}
+.icon22{
+	@include icon-small-abs();
+	@include sprite(2,2);
+}
+.icon23{
+	@include icon-small-abs();
+	@include sprite(2,3);
+}
+.icon30{
+	@include icon-small-abs();
+	@include sprite(3,0);
+}
+.icon31{
+	@include icon-small-abs();
+	@include sprite(3,1);
+}
+.icon32{
+	@include icon-small-abs();
+	@include sprite(3,2);
+}
+.icon33{
+	@include icon-small-abs();
+	@include sprite(3,3);
+}
+.icon40{
+	@include icon-small-abs();
+	@include sprite(4,0);
+}
+.icon41{
+	@include icon-small-abs();
+	@include sprite(4,1);
+}
+.favorites{
+	@include icon-small-abs();
+	@include sprite(3,2);
+}
+.edit{
+	@include icon-small-abs();
+	@include spriteV(16,'../img/forum-home.png');
+}
+.login{
+  @include spriteV(4,'../img/forum-home.png');
+	display:inline-block;
+  height:17px;
+  width:25px;
+	position:absolute;
+	left:5px;
+	top:3px;
+	margin:auto;
+}
+.first-new{
+	@include icon-small(17px,17px);
+	@include spriteV(5,'../img/forum-home.png');
+	float:left;
+}
+.flat.btn .first-new{
+	@include abs-left();
+}
+.deleted{
+	@include icon-small();
+	@include spriteV(6,'../img/forum-home.png');
+	@include abs-right();
+}
+.abbo{
+	@include icon-small();
+	@include spriteV(7,'../img/forum-home.png');
+	@include abs-center();
+}
+.make-abbo,.abbo:hover{
+	@include icon-small();
+	@include spriteV(8,'../img/forum-home.png');
+	@include abs-center();
+}
+.abo-s{
+	@include icon-small();
+	@include spriteV(13,'../img/forum-home.png');
+	@include abs-left();
+}
+.email-s{
+	@include icon-small();
+	@include spriteV(14,'../img/forum-home.png');
+	@include abs-left();
+}
+.friends{
+	@include icon-small();
+	@include spriteV(12,'../img/forum-home.png');
+	@include abs-left();
+}
+.statistic{
+	@include icon-small();
+	@include spriteV(18,'../img/forum-home.png');
+	@include abs-left();
+}
+.user-yes{
+	@include icon-small();
+	@include spriteV(10,'../img/forum-home.png');
+	margin:5px 0 0;
+}
+.user-no{
+	@include icon-small();
+	@include spriteV(11,'../img/forum-home.png');
+	margin:5px 0 0;
+}
+.email{
+	@include icon-small();
+	@include spriteV(15,'../img/forum-home.png');
+	margin:5px 0 0;
+}
+.email{
+	@include icon-small();
+	@include spriteV(15,'../img/forum-home.png');
+	margin:5px 0 0;
+}
+.reply{
+	@include icon-small();
+	@include spriteV(17,'../img/forum-home.png');
+}
+.socialG,.socialF{
+	display: inline-block;
+	width:90px;
+	height:30px;
+	background:url(../img/social.png) 0 0px no-repeat;
+}
+.socialF{
+	background:url(../img/social.png) 0 -33px no-repeat;
+}
+@media not all and (-webkit-min-device-pixel-ratio:0) {  
+	.friends,.statistic,.abo-s,.email-s,
+	.icon00,.icon01,.icon02,.icon03,
+	.icon10,.icon11,.icon12,.icon13,
+	.icon20,.icon21,.icon22,.icon23,
+	.icon30,.icon31,.icon32,.icon33{margin:0!important;}
+	
+	.abs-right,.ibr{margin:7px 0!important;}
+	
+}  

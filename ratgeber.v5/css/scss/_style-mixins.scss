@@ -1,0 +1,74 @@
+/*************_style-mixins.scss*************/
+@mixin boxSizing($type:border-box){
+	-webkit-box-sizing: $type;
+	-moz-box-sizing: $type;
+	box-sizing: $type;
+}
+@mixin gradient($color1,$color2){
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color2), to($color1));
+	background: -webkit-linear-gradient(bottom, $color1, $color2);
+	background: -moz-linear-gradient(bottom, $color1, $color2);
+	background: -o-linear-gradient(bottom, $color1, $color2);
+	background: -ms-linear-gradient(bottom, $color1, $color2);
+	background: linear-gradient(bottom, $color1, $color2);
+	filter: progid:DXImageTransform.Microsoft.Gradient( GradientType=0, StartColorStr=#{$color2} , EndColorStr= #{$color1});
+}
+@mixin boxShadowTransparent($alpha1,$alpha2){
+  -moz-box-shadow:
+		0 1px 0 rgba(0,0,0,$alpha1),
+		inset 0 1px 1px rgba(255,255,255,$alpha2);
+	-webkit-box-shadow:
+		0 1px 0 rgba(0,0,0,$alpha1),
+		inset 0 1px 1px rgba(255,255,255,$alpha2);
+	box-shadow:
+		0 1px 0 rgba(0,0,0,$alpha1),
+		inset 0 1px 1px rgba(255,255,255,$alpha2);
+}
+@mixin rounded($radius:5px){
+	-moz-border-radius: #{$radius};
+	-webkit-border-radius: #{$radius};
+	border-radius: #{$radius};
+}
+
+@mixin rounded-side2($side1,$side2,$radius:5px){
+	-moz-border-radius-#{$side1}#{$side2}: $radius;
+	-webkit-border-#{$side1}-#{$side2}-radius: $radius;
+	border-#{$side1}-#{$side2}-radius: $radius;
+}
+@mixin font($pxSize:12px,$weight:normal,$color:$font-color-standard){
+	font-size: $pxSize;
+	color:$color;
+	font-weight:$weight;
+}
+@mixin textShadow($color, $x:1px,$y:1px){
+	text-shadow:$x $y $color;	
+}
+@mixin abs-center(){
+	position:absolute;
+	top:0;bottom:0;left:0;right:0;
+	margin:auto;
+}
+@mixin abs-right(){
+	position:absolute !important;
+	top:0;bottom:0;
+	right:10px;
+	margin:auto;
+}
+@mixin abs-left(){
+	position:absolute;
+	top:0;bottom:0;
+	left:10px;
+	margin:auto;
+}
+@mixin icon-small($w:26px,$h:26px) {
+	display: inline-block;
+	width:$w;
+	height:$h;
+}
+@mixin more(){
+	color:$font-color-link;
+	font-weight:bold;
+	text-align: right;
+	margin:5px 7px 2px 0;
+	display:block;
+}

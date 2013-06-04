@@ -1,0 +1,46 @@
+/*************_pagina.scss*************/
+.pagina{
+  margin:12px $col_margin 5px;
+	float:right;
+	list-style-type: none;
+	li{
+		float:left;
+		margin:0 0 0 4px;
+		-o-transform-origin: 0 0;
+		o-object-position:0 0;
+	}
+	a{
+		@include main-btn();
+		@include btn-styles();
+		padding:3px 7px;
+		margin:0;
+		
+	}
+	a.current-page{
+		@include btn-styles-hover();
+		color:$font-color-link;
+		font-weight:bold;
+	}
+.wp-paginate .current{
+		@include main-btn();
+		@include btn-styles-hover();
+		border: 1px solid #cbcbcb;
+		color:$font-color-link;
+		font-weight:bold;
+		margin-right: 4px;
+		padding:3px 7px;
+		@include rounded(4px);
+		
+}
+	.txt-arrow{
+		font-size: 25px;
+		padding: 9px 10px 15px 10px;
+		line-height: 0;	
+	}
+}
+@media not all and (-webkit-min-device-pixel-ratio:0) {  
+	.pagina .txt-arrow{
+			padding: 19px 10px 5px;
+			margin:0;
+	}
+}

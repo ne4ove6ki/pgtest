@@ -1,0 +1,111 @@
+@import "grid";
+@import "global-vars";
+@import "style-mixins";
+@import "headings-mixins";
+@import "format-mixins";
+.tipp-cat{
+
+	@include col(4);
+	margin-right:15px;
+	margin-right:10px\9;
+	>a:hover{color:#333;}
+	h3{
+		@include h3();
+		border-bottom:1px solid $content-border-color;
+		margin:0 0 2px 0;
+		padding:0 0 3px 0;
+		vertical-align:bottom;
+	}
+	ul{
+		@include list();
+	}
+	p{
+		color:#333;
+	}
+	.more{
+		border-top:1px solid $content-border-color;
+		@include more();
+	}
+	>a.more:hover{color:$font-color-link !important;}
+	.img-wr{overflow:hidden;}
+}
+/*	Default Layout: 926px */
+.catList{
+	@include col(12);
+		margin-right:10px;
+	
+	h2{
+		@include h2();
+
+		margin:5px 0 15px 0;
+	}
+}
+.nivo{
+	float:right;
+	margin:0 15px -35px 0;
+	position:relative;
+	z-index:1000;
+}
+
+.content-with-aside .catList{
+	@include col(8);
+	@include last();
+	.tipp-cat:nth-child(2n+1){margin-right:0;}
+}
+.content-with-aside .fs{
+	@extend .catList;
+	&:nth-child(2n+1){margin-right:0;	}
+}
+
+/*	Tablet Layout: 768px */
+@media only screen and (min-width: 614px) and (max-width: 903px) {
+	.main-wrapper {
+		padding: 0 10px 20px 10px;
+	}
+	.catList{
+		@include col(8);
+		padding:0;
+		
+		@include boxSizing();
+		.tipp-cat{
+			margin-right:10px;
+		}
+	}
+	.catList.fs,.content-with-aside .catList{
+		@extend .catList;
+		.tipp-cat:nth-child(3n+1){margin-right:10px;}
+	}
+}
+/*		Mobile Wide Layout: 480px */
+@media only screen and (min-width: 448px) and (max-width: 613px) {
+	.catList,.content-with-aside .catList,.catList.fs{
+		@include col(6);
+		margin:0 0 0 -10px;
+		.tipp-cat{
+			&:nth-child(3n+1),
+			&:nth-child(2n+1),
+			&:nth-child(n){
+				margin:0 auto;
+				margin-right:auto;
+				float:none;
+			}
+			
+		}
+		h2{margin-left:75px;}
+	}
+	.nivo{margin:10px 15px 0;}
+}
+/*		Mobile Layout: 320px */
+@media only screen and (max-width: 447px) {
+	.catList,.content-with-aside .catList{
+		@include col(4);
+		overflow:hidden;
+		margin:0;
+		.tipp-cat:nth-child(n){
+			margin:0;
+			padding:0 0 0 3px;
+		}
+		h2,h3{padding-left:10px;}
+	}
+	.nivo{margin:10px 15px 0;}
+}

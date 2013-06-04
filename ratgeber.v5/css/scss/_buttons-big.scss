@@ -1,0 +1,79 @@
+/*************.btns-big.scss*************/
+.forum-home{
+	clear:both;
+	margin:15px 0 0 $col_margin;
+	overflow:auto;
+	.last{
+		margin-right:0;
+	}
+	.sub-wrapper{
+		clear:both;
+	}
+	h1{
+		margin:10px 0 0;
+	}
+	article{
+		display:block;
+		margin:15px 0 0;
+		@include col(4);
+		
+		h2{
+			@include btn-styles();
+			padding:7px 15px 7px 35px;
+			position: relative;
+			z-index: 4;
+		}
+		&:hover{
+			cursor:pointer;
+			}
+		a:hover{
+			text-decoration:none;
+		}
+	}
+}
+
+.submenu {
+	margin:0 2px;
+	display: block;
+	line-height:1.3em;
+	vertical-align:bottom;
+	background:$content-bg-light;
+	border:1px solid $btn-border-color;
+	border-top: none;
+	
+	@include rounded-side2(bottom,left,$rounded-radius);
+	@include rounded-side2(bottom,right,$rounded-radius);
+	.thread-num{
+		float	:left;
+		color:$font-color-standard;
+	}
+	h3{
+		float:left;
+		margin-right:.5em;
+		font-size:$body-font-size;
+		font-weight:normal;
+	}
+	.submenu-item{
+		display: block;
+		text-decoration: none;
+		overflow:auto;
+		padding: 3px 15px;
+		border-top:none;
+		cursor:pointer;
+	
+		&:hover{
+			background-color:$submenu-bg-color-hover ;	
+		}
+	}
+	.submenu-item:first-child{
+		padding-top:5px;
+	}
+	.submenu-item:last-child{
+		padding-bottom:5px;
+	}
+	.more{
+		text-align:right;
+	}
+}
+
+
